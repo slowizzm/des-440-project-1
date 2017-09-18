@@ -1,10 +1,6 @@
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 /*This is some further normalization and base styles. */
-html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
-}
+
 
 ::-moz-selection {
     background: #b3d4fc;
@@ -58,44 +54,179 @@ THIS IS BETTER THAN DEFAULT, YOU SHOULD ALWAYS USE THIS:
 */
 html {
   box-sizing: border-box;
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
 /* END BOX MODEL SETTINGS */
 
+.text-section {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+p {
+  font-family: 'Open Sans Condensed', serif;
+  text-align: justify;
+}
+
+h1 {
+  font-family: 'Open Sans Condensed', serif;
+  font-size: 4em;
+}
+
+.wrap-before {
+    shape-outside: polygon(0 0,0 100%,100% 100%,0 50%,100% 0);
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.wrap-after {
+    shape-outside: polygon(100% 0,100% 100%,0% 100%,100% 50%,0% 0);
+    float: right;
+    width: 50%;
+    height: 100%;
+}
+
+a {
+  font-family: 'Open Sans Condensed', serif;
+  text-align: center;
+  display: block;
+  color: grey;
+}
+
 body {
   font-size: 16px; /* Base Size */
   /*Setting the base font family*/
   font-family: "Source Sans Pro", Verdana, sans-serif;
-  background-image: url("../img/mock_bg2.png");
-  background-size: 100vw auto;
+  background-image: url("../img/mock-bg.png");
+  background-color: #bbc2bb;
+  background-size: 50% auto;
   background-repeat: no-repeat;
-  background-attachment: scroll;
-	z-index: 0;
+  height: 2200px;
   margin: 0;
   padding: 0;
 }
 
-#myCanvas{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index:20;
-}
-
-#myCanvas canvas {
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
+.layer-4 {
 
 }
+
+.layer-3 {
+
+}
+
+.layer-2 {
+
+}
+
+.layer-1 {
+  position: relative;
+  bottom: auto0px;
+  left: 20px;
+  /*height: 2200px;*/
+}
+
+
+
+
 
 /*Here's a sample media query for you. This one is for desktop styles.*/
 /*@media only screen and (min-width: 960px) {
 
+}*/
+
+/*iPhone 7 in landscape*/
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : landscape) {
+
+  .text-section {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+  }
+
+  p {
+    font-family: 'Open Sans Condensed', serif;
+    text-align: justify;
+  }
+
+  h1 {
+    font-family: 'Open Sans Condensed', serif;
+    font-size: 3px;
+  }
+
+  .wrap-before {
+      shape-outside: polygon(0 0,0 100%,100% 100%,0 50%,100% 0);
+      float: left;
+      width: 50%;
+      height: 100%;
+  }
+
+  .wrap-after {
+      shape-outside: polygon(100% 0,100% 100%,0% 100%,100% 50%,0% 0);
+      float: right;
+      width: 50%;
+      height: 100%;
+  }
+
+  a {
+    font-family: 'Open Sans Condensed', serif;
+    text-align: center;
+    display: block;
+    color: grey;
+  }
+}
+
+/*iPhone 7 in portrait*/
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+/*and (orientation : portrait)*/ {
+
+  .text-section {
+    width: 200px;
+    height: 300px;
+    margin: 0 auto;
+  }
+
+  p {
+    font-family: 'Open Sans Condensed', serif;
+    text-align: justify;
+  }
+
+  h1 {
+    font-family: 'Open Sans Condensed', serif;
+    font-size: 3px;
+  }
+
+  .wrap-before {
+      shape-outside: polygon(0 0,0 100%,100% 100%,0 50%,100% 0);
+      float: left;
+      width: 50%;
+      height: 100%;
+  }
+
+  .wrap-after {
+      shape-outside: polygon(100% 0,100% 100%,0% 100%,100% 50%,0% 0);
+      float: right;
+      width: 50%;
+      height: 100%;
+  }
+
+  a {
+    font-family: 'Open Sans Condensed', serif;
+    text-align: center;
+    display: block;
+    color: grey;
+  }
 }
 
 /* ==========================================================================
