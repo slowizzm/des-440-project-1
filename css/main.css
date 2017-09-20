@@ -104,32 +104,56 @@ body {
   font-size: 16px; /* Base Size */
   /*Setting the base font family*/
   font-family: "Source Sans Pro", Verdana, sans-serif;
-  background-image: url("../img/mock-bg.png");
   background-color: #bbc2bb;
-  background-size: 50% auto;
-  background-repeat: no-repeat;
-  height: 2200px;
   margin: 0;
   padding: 0;
 }
 
-.layer-4 {
+.bg {
+  background-image: url("../img/layer-1.png"), url("../img/layer-2.png"), url("../img/layer-4.png"), url("../img/lotus-being.png");
+  background-position: bottom center, center center, top center, bottom center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 
+  padding: 100px;
+  max-width: 2000px;
+  margin: auto;
+  height: 2000px;
+  z-index: -1;
 }
 
-.layer-3 {
-
+.background{
+	position: absolute;
+	top: 0;
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+	text-align: center;
+	z-index: -100;
 }
 
-.layer-2 {
-
+.background img{
+	float: left;
+	width: 100%;
+	height: auto;
 }
 
-.layer-1 {
-  position: relative;
-  bottom: auto0px;
-  left: 20px;
-  /*height: 2200px;*/
+
+.background-center{
+	margin: 0px auto;
+	position: relative;
+	/*max-width: 1400px;*/
+	background-color: red;
+}
+
+.moon-overlay {
+  position: ;
+  top: 0;
+}
+
+.clouds {
+
 }
 
 
@@ -189,7 +213,7 @@ and (orientation : landscape) {
 @media only screen
 and (min-device-width : 375px)
 and (max-device-width : 667px)
-/*and (orientation : portrait)*/ {
+and (orientation : portrait) {
 
   .text-section {
     width: 200px;
@@ -226,6 +250,78 @@ and (max-device-width : 667px)
     text-align: center;
     display: block;
     color: grey;
+  }
+
+  body {
+    font-size: 16px; /* Base Size */
+    /*Setting the base font family*/
+    font-family: "Source Sans Pro", Verdana, sans-serif;
+    background-color: #bbc2bb;
+    margin: 0;
+    padding: 0;
+  }
+
+  .bg {
+    background-image: url("../img/layer-1.png"), url("../img/layer-2.png"), url("../img/layer-4.png");
+    background-position: bottom left, center center, top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+
+    padding: 100px;
+    max-width: 2000px;
+    margin: auto;
+    height: 2000px;
+    z-index: -1;
+  }
+
+  .light-being {
+    background-image: url("../img/lotus-being.png");
+    background-position: bottom center;
+    background-size: auto 7%;
+    background-repeat: no-repeat;
+    height: 1800px;
+    margin-right: 30px;
+    padding-right: 50px;
+  }
+
+  .background{
+  	position: absolute;
+  	top: 0;
+  	width: auto;
+  	height: auto;
+  	max-width: 100%;
+  	max-height: 100%;
+  	text-align: center;
+  	z-index: -100;
+  }
+
+  .background img{
+  	float: left;
+  	width: 100%;
+  	height: auto;
+  }
+
+
+  .background-center{
+  	margin: 0px auto;
+  	position: relative;
+  	/*max-width: 1400px;*/
+  	background-color: red;
+  }
+
+  .moon {
+    background-image: url("../img/moon.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 2000px;
+  }
+
+  .clouds {
+    background-image: url("../img/clouds-top.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 2000px;
   }
 }
 
