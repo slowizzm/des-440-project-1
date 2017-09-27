@@ -58,6 +58,8 @@ textarea {
   font-family: 'walsheim';
   src: url('../font/GT-Walsheim-Pro-Trial-Black-Oblique.otf') format('opentype');
 }
+@import (css) url("//hello.myfonts.net/count/260f98");
+@font-face {font-family: 'MonotypeCorsiva';src: url('../260F98_0_0.eot');src: url('../260F98_0_0.eot?#iefix') format('embedded-opentype'),url('../260F98_0_0.woff') format('woff'),url('../260F98_0_0.ttf') format('truetype');}
 
 
 /* BOX MODEL SETTING FOR ALL ELEMENTS BY DEFAULT
@@ -225,27 +227,37 @@ body {
   /* END BOX MODEL SETTINGS */
   .text-section {
     width: 242px;
-    height: 420px;
+    height: 333px;
     margin: 0 auto;
     top: 0;
     padding-left: 3px;
     padding-top: 33px;
   }
   p {
-    font-family: 'america';
+    font-family: 'MonotypeCorsiva';
+    font-size: 1.3em;
     text-align: justify;
     color: white;
-    background-color: rgba(33, 33, 33, 0.1);
+    /*background-color: rgba(33, 33, 33, 0.1);*/
+  }
+
+  p q{
+    font-family: 'MonotypeCorsiva';
+    font-size: 1.3em;
+    text-align: justify;
+    color: white;
+    padding-left: 133px;
+    /*background-color: rgba(33, 33, 33, 0.1);*/
   }
   h1 {
-    font-family: 'walsheim';
+    font-family: 'MonotypeCorsiva';
     font-size: 2.3em;
     color: rgba(0, 255, 0, 0.6);
     position: relative;
-    padding-top: 133px;
+    padding-top: 33px;
     margin-bottom: 0;
-    margin-left: 83px;
-    background-color: rgba(33, 33, 33, 0.3);
+    margin-left: 103px;
+    /*background-color: rgba(33, 33, 33, 0.3);*/
   }
   .wrap-before {
     shape-outside: polygon(0 0, 0 100%, 100% 100%, 0 50%, 100% 0);
@@ -257,13 +269,13 @@ body {
     shape-outside: polygon(100% 0, 100% 100%, 0% 100%, 100% 50%, 0% 0);
     float: right;
     width: 50%;
-    height: 75%;
+    height: 100%;
   }
   a {
     font-family: 'Open Sans Condensed', serif;
     text-align: center;
     display: block;
-    color: grey;
+    /*color: grey;*/
   }
   body {
     font-size: 16px;
@@ -276,10 +288,10 @@ body {
   }
   .background-wolf img {
     float: left;
-    width: 33%;
+    width: 42%;
     height: auto;
-    margin-top: 1000px;
-    margin-left: 267px;
+    margin-top: 996px;
+    margin-left: 233px;
   }
   .background-wolf {
     position: absolute;
