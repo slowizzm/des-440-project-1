@@ -76,16 +76,16 @@ html {
 }
 /* END BOX MODEL SETTINGS */
 .text-section {
-  width: 242px;
-  height: 333px;
+  width: 67vw;
+  height: 1333px;
   margin: 0 auto;
   top: 0;
   padding-left: 3px;
-  padding-top: 33px;
+  padding-top: 333px;
 }
 p {
   font-family: 'MonotypeCorsiva';
-  font-size: 1.3em;
+  font-size: 3.3vw;
   text-align: justify;
   color: white;
   /*background-color: rgba(33, 33, 33, 0.1);*/
@@ -93,9 +93,10 @@ p {
 
 p q{
   font-family: 'MonotypeCorsiva';
-  font-size: 1.3em;
+  font-size: 3.3vw;
   text-align: justify;
   color: white;
+  padding-top: 3333px;
   padding-left: 133px;
   /*background-color: rgba(33, 33, 33, 0.1);*/
 }
@@ -136,12 +137,19 @@ body {
   margin: 0;
   padding: 0;
 }
-.background-wolf img {
+/*.background-wolf img {
   float: left;
   width: 42%;
   height: auto;
   margin-top: 996px;
   margin-left: 233px;
+}*/
+.background-wolf img {
+  float: left;
+  width: 42%;
+  height: auto;
+  margin-top: 830%;
+  margin-left: 290%;
 }
 .background-wolf {
   position: bottom;
