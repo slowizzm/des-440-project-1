@@ -137,13 +137,6 @@ body {
   margin: 0;
   padding: 0;
 }
-/*.background-wolf img {
-  float: left;
-  width: 42%;
-  height: auto;
-  margin-top: 996px;
-  margin-left: 233px;
-}*/
 .background-wolf img {
   float: left;
   width: 42%;
@@ -158,20 +151,17 @@ body {
   height: auto;
   z-index: 9000;
 }
-.background-4 {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-  text-align: center;
-  z-index: -9000;
-}
 .background-4 img {
   float: left;
   width: 100%;
   height: auto;
+}
+.background-4 {
+  position: absolute;
+  top: 0;
+  width: 80%;
+  height: auto;
+  z-index: -1;
 }
 .background-3 img {
   float: left;
@@ -182,9 +172,9 @@ body {
 .background-3 {
   position: absolute;
   top: 0;
-  width: 100%;
+  width: 80%;
   height: auto;
-  z-index: -9000;
+  z-index: -1;
 }
 .background-2 img {
   float: left;
@@ -195,9 +185,9 @@ body {
 .background-2 {
   position: absolute;
   top: 0;
-  width: 100%;
+  width: 80%;
   height: auto;
-  z-index: -9000;
+  z-index: -1;
 }
 .background-1 img {
   float: left;
@@ -208,9 +198,21 @@ body {
 .background-1 {
   position: absolute;
   top: 0;
+  width: 80%;
+  height: auto;
+  z-index: -1;
+}
+.background-clouds img {
+  float: left;
   width: 100%;
   height: auto;
-  z-index: -9000;
+  opacity: 0.7;
+}
+.background-clouds {
+  position: fixed;
+  top: 0;
+  width: 80%;
+  height: auto;
 }
 .background-center {
   position: relative;
@@ -219,14 +221,179 @@ body {
 }
 
 .container {
-  min-width: 15%;
-  max-width: 30%;
+  margin-left: 10vw;
 }
 
 
 /*iPhone 7 in landscape*/
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {}
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
+  html {
+    box-sizing: border-box;
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  /* END BOX MODEL SETTINGS */
+  .text-section {
+    width: 242px;
+    height: 333px;
+    margin: 0 auto;
+    top: 0;
+    padding-left: 3px;
+    padding-top: 33px;
+  }
+  p {
+    font-family: 'MonotypeCorsiva';
+    font-size: 1.3em;
+    text-align: justify;
+    color: white;
+    /*background-color: rgba(33, 33, 33, 0.1);*/
+  }
+
+  p q{
+    font-family: 'MonotypeCorsiva';
+    font-size: 1.3em;
+    text-align: justify;
+    color: white;
+    padding-left: 133px;
+    /*background-color: rgba(33, 33, 33, 0.1);*/
+  }
+  h1 {
+    font-family: 'MonotypeCorsiva';
+    font-size: 2.3em;
+    color: rgba(0, 255, 0, 0.6);
+    position: relative;
+    padding-top: 33px;
+    margin-bottom: 0;
+    margin-left: 103px;
+    /*background-color: rgba(33, 33, 33, 0.3);*/
+  }
+  .wrap-before {
+    shape-outside: polygon(0 0, 0 100%, 100% 100%, 0 50%, 100% 0);
+    float: left;
+    width: 50%;
+    height: 100%;
+  }
+  .wrap-after {
+    shape-outside: polygon(100% 0, 100% 100%, 0% 100%, 100% 50%, 0% 0);
+    float: right;
+    width: 50%;
+    height: 100%;
+  }
+  a {
+    font-family: 'Open Sans Condensed', serif;
+    text-align: center;
+    display: block;
+    /*color: grey;*/
+  }
+  body {
+    font-size: 16px;
+    /* Base Size */
+    /*Setting the base font family*/
+    font-family: "Source Sans Pro", Verdana, sans-serif;
+    background-color: #bbc2bb;
+    margin: 0;
+    padding: 0;
+  }
+  .container{
+
+    min-width: 100%;
+    max-width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  .background-wolf img {
+    float: left;
+    width: 42%;
+    height: auto;
+    margin-top: 996px;
+    margin-left: 216px;
+  }
+  .background-wolf {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 9000;
+  }
+  .background-4 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+    z-index: -9000;
+  }
+  .background-4 img {
+    float: left;
+    width: 100%;
+    height: auto;
+  }
+  .background-3 img {
+    float: left;
+    width: 100%;
+    height: auto;
+    margin-top: 134%;
+  }
+  .background-3 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: -9000;
+  }
+  .background-2 img {
+    float: left;
+    width: 100%;
+    height: auto;
+    margin-top: 206%;
+  }
+  .background-2 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: -9000;
+  }
+  .background-1 img {
+    float: left;
+    width: 100%;
+    height: auto;
+    margin-top: 230%;
+  }
+  .background-1 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: -9000;
+  }
+  .background-clouds img {
+    float: left;
+    width: 100%;
+    height: auto;
+    opacity: 0.3;
+  }
+  .background-clouds {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: -9000;
+  }
+  .background-center {
+    position: relative;
+    /*max-width: 1400px;*/
+    background-color: #bbc2bb;
+  }
+}
 
 
 /*///////////////////////////////////////////////////////////////////////////*/
@@ -380,6 +547,20 @@ body {
   }
   .background-1 {
     position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: -9000;
+  }
+
+  .background-clouds img {
+    float: left;
+    width: 100%;
+    height: auto;
+    opacity: 0.3;
+  }
+  .background-clouds {
+    position: fixed;
     top: 0;
     width: 100%;
     height: auto;
