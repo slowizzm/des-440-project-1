@@ -45,8 +45,20 @@ textarea {
 /*Here's where you would put your Google Fonts import*/
 
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700|Source+Sans+Pro:200,300,400,400i,600,700,900|Source+Serif+Pro:400,600,700');
+@import url('../font/GT-America-Trial-Extended-Regular.otf');
 
 /*///////////////////////////////////////////////////////////////////////////*/
+
+@font-face {
+  font-family: 'america';
+  src: url('../font/GT-America-Trial-Extended-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'walsheim';
+  src: url('../font/GT-Walsheim-Pro-Trial-Black-Oblique.otf') format('opentype');
+}
+
 
 /* BOX MODEL SETTING FOR ALL ELEMENTS BY DEFAULT
 THIS IS BETTER THAN DEFAULT, YOU SHOULD ALWAYS USE THIS:
@@ -62,26 +74,28 @@ html {
 }
 /* END BOX MODEL SETTINGS */
 .text-section {
-  width: 900px;
-  height: 515px;
+  width: 242px;
+  height: 420px;
   margin: 0 auto;
-  padding-left: 67px;
-  padding-top: 67px;
+  top: 0;
+  padding-left: 3px;
+  padding-top: 33px;
 }
 p {
-  font-family: 'Open Sans Condensed', serif;
+  font-family: 'america';
   text-align: justify;
   color: white;
+  background-color: rgba(33, 33, 33, 0.1);
 }
-
 h1 {
-  font-family: 'Open Sans Condensed', serif;
-  font-size: 13vw;
-  color: white;
-  position: top center;
-  top: 0;
-  padding-bottom: 13px;
-  padding-left: 133px;
+  font-family: 'walsheim';
+  font-size: 2.3em;
+  color: rgba(0, 255, 0, 0.6);
+  position: relative;
+  padding-top: 133px;
+  margin-bottom: 0;
+  margin-left: 83px;
+  background-color: rgba(33, 33, 33, 0.3);
 }
 .wrap-before {
   shape-outside: polygon(0 0, 0 100%, 100% 100%, 0 50%, 100% 0);
@@ -102,7 +116,7 @@ a {
   color: grey;
 }
 body {
-  font-size: 3vw;
+  font-size: 16px;
   /* Base Size */
   /*Setting the base font family*/
   font-family: "Source Sans Pro", Verdana, sans-serif;
@@ -110,73 +124,84 @@ body {
   margin: 0;
   padding: 0;
 }
-.bg {
-  background-image: url("../img/bottom-layer.png"), url("../img/top-layer.png");
-  background-position: bottom center, top center;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
+.background-wolf img {
+  float: left;
   width: 100%;
-  height: 2800px;
-  max-width: 1160px;
-  z-index: -1;
+  height: auto;
+  margin-top: 1033px;
+  margin-left: 133px;
 }
-.light-being {
-  background-image: url("../img/lotus-being.png");
-  background-position: bottom center;
-  background-size: auto 3%;
-  background-repeat: no-repeat;
-  height: 2683px;
-  margin-right: 130px;
-  padding-right: 50px;
-}
-.background-center {
-  margin: 0px auto;
-  position: relative;
-  /*max-width: 1400px;*/
-  background-color: red;
-}
-.moon {
-  background-image: url("../img/moon-2.png");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
+.background-wolf {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  width: 10%;
   height: auto;
-  /*mix-blend-mode: exclusion;*/
-}
-.moon-border {
-  background-image: url("../img/moon-border.png");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  position: absolute center;
-  top: 0;
-  left: 0;
-  width: 100%;
-  max-width: 1160px;
-  height: 2800px;
-  opacity: 0.1px;
-  /*mix-blend-mode: exclusion;*/
   z-index: 9000;
 }
-
-.wolf {
-  background-image: url("../img/wolf.png");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position: top center;
+.background-4 {
+  position: absolute;
+  top: 0;
   width: 100%;
   height: auto;
-  opacity: 0.3;
+  max-width: 100%;
+  max-height: 100%;
+  text-align: center;
+  z-index: -9000;
+}
+.background-4 img {
+  float: left;
+  width: 100%;
+  height: auto;
+}
+.background-3 img {
+  float: left;
+  width: 100%;
+  height: auto;
+  margin-top: 134%;
+}
+.background-3 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+  z-index: -9000;
+}
+.background-2 img {
+  float: left;
+  width: 100%;
+  height: auto;
+  margin-top: 206%;
+}
+.background-2 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+  z-index: -9000;
+}
+.background-1 img {
+  float: left;
+  width: 100%;
+  height: auto;
+  margin-top: 230%;
+}
+.background-1 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+  z-index: -9000;
+}
+.background-center {
+  position: relative;
+  /*max-width: 1400px;*/
+  background-color: #bbc2bb;
 }
 
 
 /*iPhone 7 in landscape*/
 
-@media only screen
-and (min-device-width: 375px)
-and (max-device-width: 667px) and (orientation: landscape) {}
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {}
 
 
 /*///////////////////////////////////////////////////////////////////////////*/
@@ -184,10 +209,7 @@ and (max-device-width: 667px) and (orientation: landscape) {}
 
 /*iPhone 7 in portrait*/
 
-@media only screen
-and (min-device-width: 375px)
-and (max-device-width: 667px)
-and (orientation: portrait) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
   /* BOX MODEL SETTING FOR ALL ELEMENTS BY DEFAULT
   THIS IS BETTER THAN DEFAULT, YOU SHOULD ALWAYS USE THIS:
   */
@@ -202,24 +224,28 @@ and (orientation: portrait) {
   }
   /* END BOX MODEL SETTINGS */
   .text-section {
-    width: 300px;
-    height: 515px;
+    width: 242px;
+    height: 420px;
     margin: 0 auto;
-    padding-left: 67px;
-    padding-top: 67px;
+    top: 0;
+    padding-left: 3px;
+    padding-top: 33px;
   }
   p {
-    font-family: 'Open Sans Condensed', serif;
+    font-family: 'america';
     text-align: justify;
     color: white;
+    background-color: rgba(33, 33, 33, 0.1);
   }
   h1 {
-    font-family: 'Open Sans Condensed', serif;
-    font-size: 3em;
-    color: white;
-    position: top center;
-    top: 0;
-    padding-bottom: 13px;
+    font-family: 'walsheim';
+    font-size: 2.3em;
+    color: rgba(0, 255, 0, 0.6);
+    position: relative;
+    padding-top: 133px;
+    margin-bottom: 0;
+    margin-left: 83px;
+    background-color: rgba(33, 33, 33, 0.3);
   }
   .wrap-before {
     shape-outside: polygon(0 0, 0 100%, 100% 100%, 0 50%, 100% 0);
@@ -231,7 +257,7 @@ and (orientation: portrait) {
     shape-outside: polygon(100% 0, 100% 100%, 0% 100%, 100% 50%, 0% 0);
     float: right;
     width: 50%;
-    height: 100%;
+    height: 75%;
   }
   a {
     font-family: 'Open Sans Condensed', serif;
@@ -248,62 +274,78 @@ and (orientation: portrait) {
     margin: 0;
     padding: 0;
   }
-  .bg {
-    background-image: url("../img/bottom-layer.png"), url("../img/top-layer.png");
-    background-position: bottom center, top center;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 1400px;
-    z-index: -1;
+  .background-wolf img {
+    float: left;
+    width: 33%;
+    height: auto;
+    margin-top: 1000px;
+    margin-left: 267px;
   }
-  .light-being {
-    background-image: url("../img/lotus-being.png");
-    background-position: bottom center;
-    background-size: auto 3%;
-    background-repeat: no-repeat;
-    height: 1333px;
-    margin-right: 130px;
-    padding-right: 50px;
-  }
-  .background-center {
-    margin: 0px auto;
-    position: relative;
-    /*max-width: 1400px;*/
-    background-color: red;
-  }
-  .moon {
-    background-image: url("../img/moon-2.png");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
+  .background-wolf {
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
     height: auto;
-    /*mix-blend-mode: exclusion;*/
-  }
-  .moon-border {
-    background-image: url("../img/moon-border.png");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    /*mix-blend-mode: exclusion;*/
     z-index: 9000;
   }
-
-  .wolf {
-    background-image: url("../img/wolf.png");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position: top center;
+  .background-4 {
+    position: absolute;
+    top: 0;
     width: 100%;
     height: auto;
-    opacity: 0.3;
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+    z-index: -9000;
+  }
+  .background-4 img {
+    float: left;
+    width: 100%;
+    height: auto;
+  }
+  .background-3 img {
+    float: left;
+    width: 100%;
+    height: auto;
+    margin-top: 134%;
+  }
+  .background-3 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: -9000;
+  }
+  .background-2 img {
+    float: left;
+    width: 100%;
+    height: auto;
+    margin-top: 206%;
+  }
+  .background-2 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: -9000;
+  }
+  .background-1 img {
+    float: left;
+    width: 100%;
+    height: auto;
+    margin-top: 230%;
+  }
+  .background-1 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: -9000;
+  }
+  .background-center {
+    position: relative;
+    /*max-width: 1400px;*/
+    background-color: #bbc2bb;
   }
 }
 
