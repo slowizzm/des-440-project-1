@@ -77,27 +77,37 @@ html {
 /* END BOX MODEL SETTINGS */
 .text-section {
   width: 242px;
-  height: 420px;
+  height: 333px;
   margin: 0 auto;
   top: 0;
   padding-left: 3px;
   padding-top: 33px;
 }
 p {
-  font-family: 'america';
+  font-family: 'MonotypeCorsiva';
+  font-size: 1.3em;
   text-align: justify;
   color: white;
-  background-color: rgba(33, 33, 33, 0.1);
+  /*background-color: rgba(33, 33, 33, 0.1);*/
+}
+
+p q{
+  font-family: 'MonotypeCorsiva';
+  font-size: 1.3em;
+  text-align: justify;
+  color: white;
+  padding-left: 133px;
+  /*background-color: rgba(33, 33, 33, 0.1);*/
 }
 h1 {
-  font-family: 'walsheim';
+  font-family: 'MonotypeCorsiva';
   font-size: 2.3em;
   color: rgba(0, 255, 0, 0.6);
   position: relative;
-  padding-top: 133px;
+  padding-top: 33px;
   margin-bottom: 0;
-  margin-left: 83px;
-  background-color: rgba(33, 33, 33, 0.3);
+  margin-left: 103px;
+  /*background-color: rgba(33, 33, 33, 0.3);*/
 }
 .wrap-before {
   shape-outside: polygon(0 0, 0 100%, 100% 100%, 0 50%, 100% 0);
@@ -115,28 +125,28 @@ a {
   font-family: 'Open Sans Condensed', serif;
   text-align: center;
   display: block;
-  color: grey;
+  /*color: grey;*/
 }
 body {
   font-size: 16px;
   /* Base Size */
   /*Setting the base font family*/
   font-family: "Source Sans Pro", Verdana, sans-serif;
-  background-color: #bbc2bb;
+  background-color: rgba(33,33,33,0.6);
   margin: 0;
   padding: 0;
 }
 .background-wolf img {
   float: left;
-  width: 100%;
+  width: 42%;
   height: auto;
-  margin-top: 1033px;
-  margin-left: 133px;
+  margin-top: 996px;
+  margin-left: 233px;
 }
 .background-wolf {
-  position: absolute;
+  position: bottom;
   top: 0;
-  width: 10%;
+  width: 100%;
   height: auto;
   z-index: 9000;
 }
@@ -198,6 +208,11 @@ body {
   position: relative;
   /*max-width: 1400px;*/
   background-color: #bbc2bb;
+}
+
+.container {
+  min-width: 15%;
+  max-width: 30%;
 }
 
 
@@ -286,6 +301,14 @@ body {
     margin: 0;
     padding: 0;
   }
+  .container{
+
+    min-width: 100%;
+    max-width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
   .background-wolf img {
     float: left;
     width: 42%;
