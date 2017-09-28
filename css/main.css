@@ -211,7 +211,7 @@ body {
 .background-clouds {
   position: fixed;
   top: 0;
-  width: 80%;
+  width: 100vw;
   height: auto;
 }
 .background-center {
