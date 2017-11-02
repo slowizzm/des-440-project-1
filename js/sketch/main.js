@@ -1,110 +1,144 @@
 //Scene
-var camera,
-    scene,
-    renderer;
+var scene, camera, renderer;
 
-//Lights
-var dLight
-
-//Controls
-var controls;
-
-//Geometries
-var starGeo,
-    starMat;
-
-//Mouse Position
-var mousePos = new THREE.Vector3(0, 0, 0);
+/* We need this stuff too */
+var container, aspectRatio,
+  HEIGHT, WIDTH, fieldOfView,
+  nearPlane, farPlane,
+  mouseX, mouseY, windowHalfX,
+  windowHalfY, stats, geometry,
+  starStuff, materialOptions, stars;
 
 //Scene
-scene = new THREE.Scene();
-
-//Renderer
-renderer = new THREE.WebGLRenderer({alpha: true,
-    antialias: true
-});
 
 // Camera
-camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 5000);
-camera.position.set(0, 0, 333);
-camera.focalLength = camera.position.distanceTo(scene.position);
-renderer.setSize(window.innerWidth, window.innerHeight);
-//renderer.setClearColor(new THREE.Color("0x000000", 0.0));
-renderer.shadowMap.enabled = true;
-
-
-//LIGHTS
-dlight = new THREE.DirectionalLight("rgb(130,180,242)");
-pLightCenter = new THREE.PointLight("rgb(255,255,255)", 0.3);
-pLightCenter.position.y = 100;
-pLightMask = new THREE.PointLight("rgb(133,190,233)",3);
-pLightMask.position.y = 0;
-pLightMask.position.z = 100;
-pLightHighs = new THREE.PointLight("rgb(133,190,233)",3);
-pLightHighs.position.y = 0;
-pLightHighs.position.z = 600;
-rainLight = new THREE.PointLight("rgb(33,0,255)", 3);
-rainLight.position.z = 133;
-
-//Geometries
-starGeo = new THREE.SphereBufferGeometry( 0.1, 60, 60 );
-//waterGeo = new THREE.OctahedronGeometry(33,0);
-starMat = new THREE.MeshStandardMaterial({
-    color: "rgb(255,0,0)",
-    blending: THREE.AdditiveBlending
-});
 
 function setup()
 {
     'use strict';
 
-//Controls
-    //controls = new THREE.OrbitControls(camera, renderer.domElement);
+    container = document.createElement('div');
+    document.body.appendChild( container );
+    document.body.style.overflow = 'hidden';
 
+    HEIGHT = window.innerHeight;
+    WIDTH = window.innerWidth;
+    aspectRatio = WIDTH / HEIGHT;
+    fieldOfView = 75;
+    nearPlane = 500;
+    farPlane = 1000;
+    mouseX = 0;
+    mouseY = 0;
 
+    windowHalfX = WIDTH / 2;
+    windowHalfY = HEIGHT / 2;
 
-//Render to Dom
-document.getElementById('myCanvas').appendChild(renderer.domElement);
+    camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
 
-    // Events
-    window.addEventListener('resize', onWindowResize, false);
-    document.addEventListener('mousemove', mouseFollow);
-    document.addEventListener('touchstart', mouseFollow);
-    document.addEventListener('touchmove', mouseFollow);
+		//Z positioning of camera
 
-    scene.add(dlight);
-    //scene.add(pLightCenter);
-    //scene.add(pLightHighs);
-    //scene.add(pLightMask)
-    //scene.add(rainLight);
-    scene.add(camera);
+		camera.position.z = farPlane / 2;
 
-    //Water
-    for (var i = 0; i <NUM_STARS; i++)
-    {
-        var p = new Star(Math.random() * -Math.cos(Math.random() * 9000));
-        scene.add(p.dust);
-        starDust.push(p);
-    }
+		scene = new THREE.Scene({antialias:true});
+		scene.fog = new THREE.FogExp2( 0x000000, 0.0003 );
+
+		starForge();
+
+		//check for browser Support
+		if (webGLSupport()) {
+			renderer = new THREE.WebGLRenderer({alpha: true});
+
+		} else {
+			renderer = new THREE.CanvasRenderer();
+		}
+
+		renderer.setClearColor(0x000011, 0);
+		renderer.setPixelRatio(window.devicePixelRatio);
+		renderer.setSize( WIDTH, HEIGHT);
+		container.appendChild(renderer.domElement);
+
+		stats = new Stats();
+		stats.domElement.style.position = 'absolute';
+		stats.domElement.style.top = '0px';
+		stats.domElement.style.right = '0px';
+		container.appendChild( stats.domElement );
+
+		window.addEventListener( 'resize', onWindowResize, false );
+		document.addEventListener( 'mousemove', onMouseMove, false );
 
     update();
 };
 
 function draw()
 {
-    requestAnimationFrame(draw);
-
-    for (var i = 0; i < starDust.length; i++)
-    {
-        starDust[i].update();
-        starDust[i].edges();
-        starDust[i].display();
-    }
-
-    renderer.render(scene, camera);
+  camera.position.x += ( mouseX - camera.position.x ) * 0.0005;
+  camera.position.y += ( - mouseY - camera.position.y ) * 0.0005;
+  //camera.lookAt( scene.position );
+  renderer.render(scene, camera);
 };
 
 var update = function ()
 {
-    draw();
+  requestAnimationFrame(update);
+  draw();
+  stats.update();
 };
+
+function webGLSupport() {
+
+  try {
+    var canvas = document.createElement('canvas');
+    return !!(window.WebGLRenderingContext && (
+      canvas.getContext('webgl') || canvas.getContext('experimental-webgl'))
+    );
+  } catch(e) {
+    // console.warn(not able to use webGL for this.  use canvas.');
+    return false;
+  }
+}
+
+// function onWindowResize() {
+//
+//   // resize
+//     var WIDTH = window.innerWidth,
+//       HEIGHT = window.innerHeight;
+//
+//     camera.aspect = aspectRatio;
+//     camera.updateProjectionMatrix();
+//     renderer.setSize(WIDTH, HEIGHT);
+// }
+
+function starForge() {
+
+  var starQty = 4500;
+    geometry = new THREE.SphereGeometry(1000, 100, 50);
+
+      materialOptions = {
+        size: 1.0, //
+        transparency: true,
+        opacity: 0.7
+      };
+
+      starStuff = new THREE.PointCloudMaterial(materialOptions);
+
+  for (var i = 0; i < starQty; i++) {
+
+    var starVertex = new THREE.Vector3();
+    starVertex.x = Math.random() * 2000 - 1000;
+    starVertex.y = Math.random() * 2000 - 1000;
+    starVertex.z = Math.random() * 2000 - 1000;
+
+    geometry.vertices.push(starVertex);
+
+  }
+
+
+  stars = new THREE.PointCloud(geometry, starStuff);
+  scene.add(stars);
+}
+
+function onMouseMove(e) {
+
+  mouseX = e.clientX - windowHalfX;
+  mouseY = e.clientY - windowHalfY;
+}

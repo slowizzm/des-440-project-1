@@ -3,6 +3,8 @@
 
 /*This is some further normalization and base styles. */
 
+
+
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
@@ -10,6 +12,7 @@
 
 ::selection {
   background: #b3d4fc;
+  /*background: #000000;*/
   text-shadow: none;
 }
 
@@ -24,6 +27,16 @@ hr {
 
 audio, canvas, iframe, img, svg, video {
   vertical-align: middle;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  pointer-events: none;
+  z-index: 9999;
 }
 
 fieldset {
@@ -58,8 +71,8 @@ textarea {
   font-family: 'walsheim';
   src: url('../font/GT-Walsheim-Pro-Trial-Black-Oblique.otf') format('opentype');
 }
-@import (css) url("//hello.myfonts.net/count/260f98");
-@font-face {font-family: 'MonotypeCorsiva';src: url('../260F98_0_0.eot');src: url('../260F98_0_0.eot?#iefix') format('embedded-opentype'),url('../260F98_0_0.woff') format('woff'),url('../260F98_0_0.ttf') format('truetype');}
+@import url('https://fonts.googleapis.com/css?family=Raleway:600');
+@font-face {font-family: 'Raleway', sans-serif;}
 
 
 /* BOX MODEL SETTING FOR ALL ELEMENTS BY DEFAULT
@@ -84,7 +97,7 @@ html {
   padding-top: 333px;
 }
 p {
-  font-family: 'MonotypeCorsiva';
+  font-family: 'Raleway';
   font-size: 3.3vw;
   text-align: justify;
   color: white;
@@ -92,7 +105,7 @@ p {
 }
 
 p q{
-  font-family: 'MonotypeCorsiva';
+  font-family: 'Raleway';
   font-size: 3.3vw;
   text-align: justify;
   color: white;
@@ -101,7 +114,7 @@ p q{
   /*background-color: rgba(33, 33, 33, 0.1);*/
 }
 h1 {
-  font-family: 'MonotypeCorsiva';
+  font-family: 'Raleway';
   font-size: 2.3em;
   color: rgba(0, 255, 0, 0.6);
   position: relative;
@@ -123,7 +136,7 @@ h1 {
   height: 100%;
 }
 a {
-  font-family: 'Open Sans Condensed', serif;
+  font-family: 'Raleway', serif;
   text-align: center;
   display: block;
   /*color: grey;*/
@@ -132,8 +145,8 @@ body {
   font-size: 16px;
   /* Base Size */
   /*Setting the base font family*/
-  font-family: "Source Sans Pro", Verdana, sans-serif;
-  background-color: rgba(33,33,33,0.6);
+  font-family: "Raleway", Verdana, sans-serif;
+  background-color: rgba(33,33,33,1);
   margin: 0;
   padding: 0;
 }
@@ -573,6 +586,10 @@ body {
   }
 }
 
+
+body {
+  overflow: scroll !important;
+}
 
 /* ==========================================================================
    Helper classes
