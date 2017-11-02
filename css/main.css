@@ -3,7 +3,7 @@
 
 /*This is some further normalization and base styles. */
 
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400|Raleway:600');
 
 ::-moz-selection {
   background: #b3d4fc;
@@ -30,7 +30,7 @@ audio, canvas, iframe, img, svg, video {
 }
 
 canvas {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
@@ -57,64 +57,52 @@ textarea {
 
 /*Here's where you would put your Google Fonts import*/
 
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700|Source+Sans+Pro:200,300,400,400i,600,700,900|Source+Serif+Pro:400,600,700');
-@import url('../font/GT-America-Trial-Extended-Regular.otf');
+
 
 /*///////////////////////////////////////////////////////////////////////////*/
 
-@font-face {
-  font-family: 'america';
-  src: url('../font/GT-America-Trial-Extended-Regular.otf') format('opentype');
-}
 
-@font-face {
-  font-family: 'walsheim';
-  src: url('../font/GT-Walsheim-Pro-Trial-Black-Oblique.otf') format('opentype');
-}
-@import url('https://fonts.googleapis.com/css?family=Raleway:600');
+
 @font-face {font-family: 'Raleway', sans-serif;}
+@font-face {font-family: 'Montserrat', sans-serif;}
 
 
 /* BOX MODEL SETTING FOR ALL ELEMENTS BY DEFAULT
 THIS IS BETTER THAN DEFAULT, YOU SHOULD ALWAYS USE THIS:
 */
+
+
 html {
   box-sizing: border-box;
   color: #222;
   font-size: 1em;
   line-height: 1.4;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
 /* END BOX MODEL SETTINGS */
 .text-section {
-  width: 67vw;
-  height: 1333px;
+  position: fixed;
+  width: 90vw;
+  height: 533px;
   margin: 0 auto;
   top: 0;
   padding-left: 3px;
-  padding-top: 333px;
+  padding-top: 33px;
 }
 p {
-  font-family: 'Raleway';
-  font-size: 3.3vw;
+  font-family: 'Montserrat';
+  font-size: 3.1vw;
   text-align: justify;
   color: white;
   /*background-color: rgba(33, 33, 33, 0.1);*/
 }
 
-p q{
-  font-family: 'Raleway';
-  font-size: 3.3vw;
-  text-align: justify;
-  color: white;
-  padding-top: 3333px;
-  padding-left: 133px;
-  /*background-color: rgba(33, 33, 33, 0.1);*/
-}
+
 h1 {
-  font-family: 'Raleway';
+  font-family: 'Montserrat';
   font-size: 2.3em;
   color: rgba(0, 255, 0, 0.6);
   position: relative;
@@ -136,7 +124,7 @@ h1 {
   height: 100%;
 }
 a {
-  font-family: 'Raleway', serif;
+  font-family: 'Montserrat';
   text-align: center;
   display: block;
   /*color: grey;*/
@@ -145,7 +133,7 @@ body {
   font-size: 16px;
   /* Base Size */
   /*Setting the base font family*/
-  font-family: "Raleway", Verdana, sans-serif;
+  font-family: "Source Sans Pro", Verdana, sans-serif;
   background-color: rgba(33,33,33,1);
   margin: 0;
   padding: 0;
@@ -160,6 +148,7 @@ body {
 .background-wolf {
   position: bottom;
   top: 0;
+  left:0;
   width: 100%;
   height: auto;
   z-index: 9000;
@@ -172,59 +161,68 @@ body {
 .background-4 {
   position: absolute;
   top: 0;
-  width: 80%;
+  left:0;
+  width: 100%;
   height: auto;
+  opacity: 0.2;
   z-index: -1;
 }
 .background-3 img {
   float: left;
   width: 100%;
   height: auto;
-  margin-top: 134%;
+  margin-top: 137.5%;
 }
 .background-3 {
   position: absolute;
   top: 0;
-  width: 80%;
+  left:0;
+  width: 100%;
   height: auto;
+  opacity: 0.25;
   z-index: -1;
 }
 .background-2 img {
   float: left;
   width: 100%;
   height: auto;
-  margin-top: 206%;
+  margin-top: 210%;
 }
 .background-2 {
   position: absolute;
   top: 0;
-  width: 80%;
+  left:0;
+  width: 100%;
   height: auto;
+  opacity: 0.3;
   z-index: -1;
 }
 .background-1 img {
   float: left;
   width: 100%;
   height: auto;
-  margin-top: 230%;
+  margin-top: 236%;
 }
 .background-1 {
   position: absolute;
   top: 0;
-  width: 80%;
+  left:0;
+  width: 100%;
   height: auto;
-  z-index: -1;
+  z-index: 10000;
 }
 .background-clouds img {
   float: left;
   width: 100%;
   height: auto;
-  opacity: 0.7;
+  opacity: 0.4;
 }
 .background-clouds {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100vw;
+  height: 100vw;
   height: auto;
 }
 .background-center {
@@ -237,6 +235,84 @@ body {
   margin-left: 10vw;
 }
 
+@media only screen and (max-width: 374px){
+  .text-section {
+    width: 242px;
+    height: 333px;
+    margin: 0 auto;
+    top: 0;
+    padding-left: 3px;
+    padding-top: 33px;
+  }
+  p {
+    font-family: 'Montserrat';
+    font-size: 5.1vw;
+    text-align: justify;
+    color: white;
+    /*background-color: rgba(33, 33, 33, 0.1);*/
+  }
+}
+
+@media only screen and (min-width: 850px){
+  .background-4 img
+    float: left;
+    width: 100%;
+    height: auto;
+  }
+  .background-4 {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 75%;
+    height: auto;
+    opacity: 0.2;
+    z-index: -1;
+  }
+  .background-3 img {
+    float: left;
+    width: 100%;
+    height: auto;
+    margin-top: 137.5%;
+  }
+  .background-3 {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 75%;
+    height: auto;
+    opacity: 0.25;
+    z-index: -1;
+  }
+  .background-2 img {
+    float: left;
+    width: 100%;
+    height: auto;
+    margin-top: 210%;
+  }
+  .background-2 {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 75%;
+    height: auto;
+    opacity: 0.3;
+    z-index: -1;
+  }
+  .background-1 img {
+    float: left;
+    width: 100%;
+    height: auto;
+    margin-top: 236%;
+  }
+  .background-1 {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 75%;
+    height: auto;
+    z-index: 10000;
+  }
+}
 
 /*iPhone 7 in landscape*/
 
@@ -260,7 +336,7 @@ body {
     padding-top: 33px;
   }
   p {
-    font-family: 'MonotypeCorsiva';
+    font-family: 'Raleway';
     font-size: 1.3em;
     text-align: justify;
     color: white;
@@ -268,7 +344,7 @@ body {
   }
 
   p q{
-    font-family: 'MonotypeCorsiva';
+    font-family: 'Raleway';
     font-size: 1.3em;
     text-align: justify;
     color: white;
@@ -276,7 +352,7 @@ body {
     /*background-color: rgba(33, 33, 33, 0.1);*/
   }
   h1 {
-    font-family: 'MonotypeCorsiva';
+    font-family: 'Raleway';
     font-size: 2.3em;
     color: rgba(0, 255, 0, 0.6);
     position: relative;
@@ -437,7 +513,7 @@ body {
     padding-top: 33px;
   }
   p {
-    font-family: 'MonotypeCorsiva';
+    font-family: 'Raleway';
     font-size: 1.3em;
     text-align: justify;
     color: white;
@@ -445,7 +521,7 @@ body {
   }
 
   p q{
-    font-family: 'MonotypeCorsiva';
+    font-family: 'Raleway';
     font-size: 1.3em;
     text-align: justify;
     color: white;
@@ -453,7 +529,7 @@ body {
     /*background-color: rgba(33, 33, 33, 0.1);*/
   }
   h1 {
-    font-family: 'MonotypeCorsiva';
+    font-family: 'Raleway';
     font-size: 2.3em;
     color: rgba(0, 255, 0, 0.6);
     position: relative;

@@ -57,11 +57,11 @@ function setup()
 		renderer.setSize( WIDTH, HEIGHT);
 		container.appendChild(renderer.domElement);
 
-		stats = new Stats();
-		stats.domElement.style.position = 'absolute';
-		stats.domElement.style.top = '0px';
-		stats.domElement.style.right = '0px';
-		container.appendChild( stats.domElement );
+		// stats = new Stats();
+		// stats.domElement.style.position = 'absolute';
+		// stats.domElement.style.top = '0px';
+		// stats.domElement.style.right = '0px';
+		// container.appendChild( stats.domElement );
 
 		window.addEventListener( 'resize', onWindowResize, false );
 		document.addEventListener( 'mousemove', onMouseMove, false );
@@ -81,7 +81,7 @@ var update = function ()
 {
   requestAnimationFrame(update);
   draw();
-  stats.update();
+  //stats.update();
 };
 
 function webGLSupport() {
