@@ -125,11 +125,11 @@
 		/* 	Yep, it's a Star Wars: Knights of the Old Republic reference,
 			are you really surprised at this point?
 													*/
-		var starQty = 45000;
+		var starQty = 1;
 			geometry = new THREE.SphereGeometry(1000, 100, 50);
 
 	    	materialOptions = {
-	    		size: 1.0, //I know this is the default, it's for you.  Play with it if you want.
+	    		size: 33, //I know this is the default, it's for you.  Play with it if you want.
 	    		transparency: true,
 	    		opacity: 0.7
 	    	};
@@ -159,5 +159,9 @@
 		mouseX = e.clientX - windowHalfX;
 		mouseY = e.clientY - windowHalfY;
 	}
+
+	function izzmRandom(min, max) {
+	    return Math.random() * (max - min) + min;
+	};
 
 })();

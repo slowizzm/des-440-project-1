@@ -1,5 +1,5 @@
 var starDust = [],
-    NUM_STARS = 1000;
+    NUM_STARS = 10;
     minSpd = -2,
     maxSpd = 2;
 

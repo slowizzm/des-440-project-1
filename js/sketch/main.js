@@ -42,7 +42,7 @@ function setup()
 		scene = new THREE.Scene({antialias:true});
 		scene.fog = new THREE.FogExp2( 0x000000, 0.0003 );
 
-		starForge();
+		starForge(izzmRandom(0.1,1.3));
 
 		//check for browser Support
 		if (webGLSupport()) {
@@ -108,13 +108,13 @@ function webGLSupport() {
 //     renderer.setSize(WIDTH, HEIGHT);
 // }
 
-function starForge() {
+function starForge(_s) {
 
-  var starQty = 4500;
+  var starQty = 5000;
     geometry = new THREE.SphereGeometry(1000, 100, 50);
 
       materialOptions = {
-        size: 1.0, //
+        size: _s, //
         transparency: true,
         opacity: 0.7
       };
@@ -124,9 +124,9 @@ function starForge() {
   for (var i = 0; i < starQty; i++) {
 
     var starVertex = new THREE.Vector3();
-    starVertex.x = Math.random() * 2000 - 1000;
-    starVertex.y = Math.random() * 2000 - 1000;
-    starVertex.z = Math.random() * 2000 - 1000;
+    starVertex.x = Math.random() * 9030 - 1000;
+    starVertex.y = Math.random() * 6300 - 1000;
+    starVertex.z = Math.random() * 1003 - 1000;
 
     geometry.vertices.push(starVertex);
 
@@ -142,3 +142,7 @@ function onMouseMove(e) {
   mouseX = e.clientX - windowHalfX;
   mouseY = e.clientY - windowHalfY;
 }
+
+function izzmRandom(min, max) {
+    return Math.random() * (max - min) + min;
+};

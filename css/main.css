@@ -1,10 +1,8 @@
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 
-
 /*This is some further normalization and base styles. */
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400|Raleway:600');
-
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
@@ -49,28 +47,25 @@ textarea {
   resize: vertical;
 }
 
-
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
-
 /*Here's where you would put your Google Fonts import*/
-
-
 
 /*///////////////////////////////////////////////////////////////////////////*/
 
+@font-face {
+  font-family: 'Raleway', sans-serif;
+}
 
-
-@font-face {font-family: 'Raleway', sans-serif;}
-@font-face {font-family: 'Montserrat', sans-serif;}
-
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+}
 
 /* BOX MODEL SETTING FOR ALL ELEMENTS BY DEFAULT
 THIS IS BETTER THAN DEFAULT, YOU SHOULD ALWAYS USE THIS:
 */
-
 
 html {
   box-sizing: border-box;
@@ -79,14 +74,29 @@ html {
   line-height: 1.4;
 }
 
+.firstcharacter {
+  color: #903;
+  float: left;
+  font-family: Georgia;
+  font-size: 75px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+}
+
 .text-section {
   margin: auto;
   padding-left: 25vw;
   padding-right: 25vw;
   position: absolute;
-  top: 200px; left: 0; bottom: 0; right: 0;
+  top: 400px;
+  left: 0;
+  bottom: 0;
+  right: 0;
   z-index: 900000;
 }
+
 p {
   font-family: 'Montserrat';
   font-size: 1.8vw;
@@ -96,32 +106,39 @@ p {
   /*background-color: rgba(33, 33, 33, 0.1);*/
 }
 
-
 h1 {
   font-family: 'Montserrat';
-  font-size: 2.3em;
-  color: rgba(0, 255, 0, 0.6);
-  position: bottom;
-  padding-top: 33px;
-  margin-bottom: 0;
-  margin-left: 103px;
+  font-size: 6.3vw;
+  color: rgba(0, 255, 0, 1.0);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  width: 80vw;
+  padding-left: 20vw;
+  left: 100vw;
+  /*margin-left: 103px;*/
+  top: 0;
+  opacity: 0.3;
+  text-align: center;
   /*background-color: rgba(33, 33, 33, 0.3);*/
 }
+
 a {
   font-family: 'Montserrat';
   text-align: center;
   display: block;
   /*color: grey;*/
 }
+
 body {
   font-size: 16px;
   /* Base Size */
   /*Setting the base font family*/
   font-family: "Source Sans Pro", Verdana, sans-serif;
-  background-color: rgba(33,33,33,1);
+  background-color: rgba(33, 33, 33, 1);
   margin: 0;
   padding: 0;
 }
+
 /*.background-wolf img {
   float: left;
   width: 42%;
@@ -137,71 +154,47 @@ body {
   height: auto;
   z-index: -9000;
 }*/
+
 .background-4 img {
   float: left;
   width: 100%;
   height: auto;
 }
+
 .background-4 {
   position: absolute;
   top: 0;
-  left:0;
+  left: 0;
   width: 100%;
   height: auto;
-  opacity: 0.2;
+  opacity: 0.1;
   z-index: -1;
 }
-.background-3 img {
-  float: left;
-  width: 100%;
-  height: auto;
-  margin-top: 137.5%;
-}
-.background-3 {
-  position: absolute;
-  top: 0;
-  left:0;
-  width: 100%;
-  height: auto;
-  opacity: 0.25;
-  z-index: -1;
-}
-/*.background-2 img {
-  float: left;
-  width: 100%;
-  height: auto;
-  margin-top: 167%;
-}
-.background-2 {
-  position: absolute;
-  top: 0;
-  left:0;
-  width: 100%;
-  height: auto;
-  opacity: 0.3;
-  z-index: -1;
-}*/
+
 .background-1 img {
   float: left;
   width: 100%;
   height: auto;
   /*margin-top: 234%;*/
-  margin-top: 150%;
-  z-index: 2;
+  margin-top: 100%;
+  z-index: 10000000;
 }
+
 .background-1 {
   position: absolute;
   top: 0;
-  left:0;
+  left: 0;
   width: 100%;
   height: auto;
 }
+
 .background-clouds img {
   float: left;
   width: 100%;
   height: auto;
   opacity: 0.4;
 }
+
 .background-clouds {
   position: fixed;
   top: 0;
@@ -209,6 +202,7 @@ body {
   width: 100vw;
   height: auto;
 }
+
 .background-center {
   position: relative;
   /*max-width: 1400px;*/
@@ -219,12 +213,48 @@ body {
   margin-left: 10vw;
 }
 
-@media only screen and (max-width: 374px){
-  /*.text-section {
-    width: 80vw;
-    left: 0.3vw;
-    padding-left: 10vw;
-  }*/
+@media only screen and (max-width: 354px) {
+  .text-section {
+    top: 100px;
+  }
+  p {
+    font-family: 'Montserrat';
+    font-size: 2.7vw;
+    text-align: justify;
+    color: white;
+    z-index: 3;
+    /*background-color: rgba(33, 33, 33, 0.1);*/
+  }
+}
+
+@media only screen and (min-width: 355px && max-width: 374px) {
+  .text-section {
+    margin: auto;
+    padding-left: 25vw;
+    padding-right: 25vw;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    z-index: 900000;
+  }
+  p {
+    font-family: 'Montserrat';
+    font-size: 3.7vw;
+    text-align: justify;
+    color: white;
+    z-index: 3;
+    /*background-color: rgba(33, 33, 33, 0.1);*/
+  }
+}
+
+
+@media only screen and (min-width: 668px && max-width: 849px) {
+  .text-section {
+    top: 200px;
+  }
   p {
     font-family: 'Montserrat';
     font-size: 4.1vw;
@@ -234,110 +264,11 @@ body {
     /*background-color: rgba(33, 33, 33, 0.1);*/
   }
 }
-@media only screen and (max-width: 668px && max-width: 850px){
-  /*.text-section {
-    width: 80vw;
-    left: 0.3vw;
-    padding-left: 10vw;
-  }*/
-  p {
-    font-family: 'Montserrat';
-    font-size: 4.1vw;
-    text-align: justify;
-    color: white;
-    z-index: 3;
-    /*background-color: rgba(33, 33, 33, 0.1);*/
-  }
-}
 
-@media only screen and (min-width: 921px){
-  /*.text-section {
-    width: 642px;
-    height: 333px;
-    margin: 0 auto;
-    top: 0;
-    padding-left: 333px;
-    padding-top: 1333px;
-  }*/
-  p {
-    font-family: 'Montserrat';
-    font-size: 2.1vw;
-    text-align: justify;
-    color: white;
-    z-index: 10000;
-    /*background-color: rgba(33, 33, 33, 0.1);*/
+@media only screen and (min-width: 850px) and (max-width:920px) {
+  .text-section {
+    padding-top: 1133px;
   }
-
-  .background-4 img {
-    float: left;
-    width: 100%;
-    height: auto;
-  }
-  .background-4 {
-    position: absolute;
-    top: 0;
-    left: 10%;
-    width: 75%;
-    height: auto;
-    opacity: 0.2;
-    z-index: -1;
-  }
-  .background-3 img {
-    float: left;
-    width: 100%;
-    height: auto;
-    margin-top: 137.5%;
-  }
-  .background-3 {
-    position: absolute;
-    top: 0;
-    left: 10%;
-    width: 75%;
-    height: auto;
-    opacity: 0.25;
-    z-index: -1;
-  }
-  /*.background-2 img {
-    float: left;
-    width: 100%;
-    height: auto;
-    margin-top: 210%;
-  }
-  .background-2 {
-    position: absolute;
-    top: 0;
-    left: 10%;
-    width: 75%;
-    height: auto;
-    opacity: 0.3;
-    z-index: -1;
-  }*/
-  .background-1 img {
-    float: left;
-    width: 100%;
-    height: auto;
-    /*margin-top: 236%;*/
-    margin-top: 150%;
-  }
-  .background-1 {
-    position: absolute;
-    top: 0;
-    left: 10%;
-    width: 75%;
-    height: auto;
-    z-index: 10000;
-  }
-}
-
-@media only screen and (min-width: 850px) and (max-width:920px){
-  /*.text-section {
-    width: 442px;
-    height: 533px;
-    margin: 0 auto;
-    top: 0;
-    padding-left: 233px;
-    padding-top: 1333px;
-  }*/
   p {
     font-family: 'Montserrat';
     font-size: 2.1vw;
@@ -360,42 +291,12 @@ body {
     opacity: 0.2;
     z-index: -1;
   }
-  .background-3 img {
-    float: left;
-    width: 100%;
-    height: auto;
-    margin-top: 137.5%;
-  }
-  .background-3 {
-    position: absolute;
-    top: 0;
-    left: 10%;
-    width: 80%;
-    height: auto;
-    opacity: 0.25;
-    z-index: -1;
-  }
-  /*.background-2 img {
-    float: left;
-    width: 100%;
-    height: auto;
-    margin-top: 210%;
-  }
-  .background-2 {
-    position: absolute;
-    top: 0;
-    left: 10%;
-    width: 75%;
-    height: auto;
-    opacity: 0.3;
-    z-index: -1;
-  }*/
   .background-1 img {
     float: left;
     width: 100%;
     height: auto;
     /*margin-top: 236%;*/
-    margin-top: 150%;
+    margin-top: 100%;
   }
   .background-1 {
     position: absolute;
@@ -403,7 +304,50 @@ body {
     left: 10%;
     width: 80%;
     height: auto;
+    z-index: 10000000;
+  }
+}
+
+@media only screen and (min-width: 921px) {
+  .text-section {
+    top: 400px;
+  }
+  p {
+    font-family: 'Montserrat';
+    font-size: 2.1vw;
+    text-align: justify;
+    color: white;
     z-index: 10000;
+    /*background-color: rgba(33, 33, 33, 0.1);*/
+  }
+  .background-4 img {
+    float: left;
+    width: 100%;
+    height: auto;
+  }
+  .background-4 {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 75%;
+    height: auto;
+    opacity: 0.2;
+    z-index: -1;
+  }
+  .background-1 img {
+    float: left;
+    width: 100%;
+    height: auto;
+    /*margin-top: 236%;*/
+    margin-top: 100%;
+  }
+  .background-1 {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 75%;
+    height: auto;
+    z-index: 10000000;
   }
 }
 
@@ -420,15 +364,9 @@ body {
     box-sizing: inherit;
   }
   /* END BOX MODEL SETTINGS */
-  /*.text-section {
-    width: 242px;
-    height: 333px;
-    margin: 0 auto;
-    top: 0;
-    padding-left: 3px;
-    padding-top: 33px;
-    padding-top: 1333px;
-  }*/
+  .text-section {
+    padding-top: 333px;
+  }
   p {
     font-family: 'Raleway';
     font-size: 2.3em;
@@ -437,8 +375,7 @@ body {
     z-index: 10000;
     /*background-color: rgba(33, 33, 33, 0.1);*/
   }
-
-  p q{
+  p q {
     font-family: 'Raleway';
     font-size: 1.3em;
     text-align: justify;
@@ -456,18 +393,6 @@ body {
     margin-left: 103px;
     /*background-color: rgba(33, 33, 33, 0.3);*/
   }
-  .wrap-before {
-    shape-outside: polygon(0 0, 0 100%, 100% 100%, 0 50%, 100% 0);
-    float: left;
-    width: 50%;
-    height: 100%;
-  }
-  .wrap-after {
-    shape-outside: polygon(100% 0, 100% 100%, 0% 100%, 100% 50%, 0% 0);
-    float: right;
-    width: 50%;
-    height: 100%;
-  }
   a {
     font-family: 'Open Sans Condensed', serif;
     text-align: center;
@@ -483,14 +408,12 @@ body {
     margin: 0;
     padding: 0;
   }
-  .container{
-
+  .container {
     min-width: 100%;
     max-width: 100%;
     margin-left: 0%;
     margin-right: 0%;
   }
-
   .background-wolf img {
     float: left;
     width: 42%;
@@ -520,45 +443,19 @@ body {
     width: 100%;
     height: auto;
   }
-  .background-3 img {
-    float: left;
-    width: 100%;
-    height: auto;
-    margin-top: 134%;
-  }
-  .background-3 {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: auto;
-    z-index: -9000;
-  }
-  /*.background-2 img {
-    float: left;
-    width: 100%;
-    height: auto;
-    margin-top: 206%;
-  }
-  .background-2 {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: auto;
-    z-index: -9000;
-  }*/
   .background-1 img {
     float: left;
     width: 100%;
     height: auto;
     /*margin-top: 230%;*/
-    margin-top: 134%;
+    margin-top: 100%;
   }
   .background-1 {
     position: absolute;
     top: 0;
     width: 100%;
     height: auto;
-    z-index: -9000;
+    z-index: 10000000;
   }
   .background-clouds img {
     float: left;
@@ -580,9 +477,7 @@ body {
   }
 }
 
-
 /*///////////////////////////////////////////////////////////////////////////*/
-
 
 /*iPhone 7 in portrait*/
 
@@ -597,15 +492,16 @@ body {
     line-height: 1.4;
   }
   /* END BOX MODEL SETTINGS */
-  /*.text-section {
-    width: 242px;
-    height: 333px;
-    margin: 0 auto;
-    top: 0;
-    padding-left: 3px;
-    padding-top: 33px;
-    padding-top: 1333px;
-  }*/
+  .text-section {
+    margin: auto;
+    padding-left: 25vw;
+    padding-right: 25vw;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
   p {
     font-family: 'Raleway';
     font-size: 1.3em;
@@ -614,8 +510,7 @@ body {
     z-index: 10000;
     /*background-color: rgba(33, 33, 33, 0.1);*/
   }
-
-  p q{
+  p q {
     font-family: 'Raleway';
     font-size: 1.3em;
     text-align: justify;
@@ -643,19 +538,16 @@ body {
     font-size: 16px;
     /* Base Size */
     /*Setting the base font family*/
-    font-family: "Source Sans Pro", Verdana, sans-serif;
-    //background-color: #bbc2bb;
+    font-family: "Source Sans Pro", Verdana, sans-serif; //background-color: #bbc2bb;
     margin: 0;
     padding: 0;
   }
-  .container{
-
+  .container {
     min-width: 100%;
     max-width: 100%;
     margin-left: 0%;
     margin-right: 0%;
   }
-
   .background-wolf img {
     float: left;
     width: 42%;
@@ -685,49 +577,20 @@ body {
     height: auto;
     opacity: 0.2;
   }
-  .background-3 img {
-    float: left;
-    width: 100%;
-    height: auto;
-    margin-top: 134%;
-  }
-  .background-3 {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: auto;
-    z-index: -9000;
-    opacity: 0.25;
-  }
-  /*.background-2 img {
-    float: left;
-    width: 100%;
-    height: auto;
-    margin-top: 206%;
-  }
-  .background-2 {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: auto;
-    z-index: -9000;
-    opacity: 0.3;
-  }*/
   .background-1 img {
     float: left;
     width: 100%;
     height: auto;
     /*margin-top: 230%;*/
-    margin-top: 134%;
+    margin-top: 100%;
   }
   .background-1 {
     position: absolute;
     top: 0;
     width: 100%;
     height: auto;
-    z-index: -9000;
+    z-index: 10000000;
   }
-
   .background-clouds img {
     float: left;
     width: 100%;
@@ -748,7 +611,6 @@ body {
   }
 }
 
-
 body {
   overflow: scroll !important;
 }
@@ -756,7 +618,6 @@ body {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-
 
 /* Use this clearfix class on the parent of floated elements to clear the float! */
 

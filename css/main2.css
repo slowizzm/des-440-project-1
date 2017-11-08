@@ -1,0 +1,1143 @@
+/* There's where you would put your Google Fonts import */
+
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond|Cardo:400italic);
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700|Source+Sans+Pro:200,300,400,400i,600,700,900|Source+Serif+Pro:400,600,700');
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+/*This is some further normalization and base styles. */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+audio, canvas, iframe, img, svg, video {
+  vertical-align: middle;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  pointer-events: none;
+  z-index: 5;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* BOX MODEL SETTING FOR ALL ELEMENTS BY DEFAULT
+THIS IS BETTER THAN DEFAULT, YOU SHOULD ALWAYS USE THIS:
+*/
+
+html {
+  box-sizing: border-box;
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* END BOX MODEL SETTINGS */
+
+body {
+  font-size: 16px;
+  /* Base Size */
+  /*Setting the base font family*/
+  font-family: "Source Sans Pro", Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.firstcharacter {
+  color: rgb(33, 200, 67);
+  float: left;
+  font-family: Georgia;
+  font-size: 7.1vw;
+  line-height: 9.5vw;
+  padding-top: 0.1vw;
+  padding-right: 8px;
+  padding-left: 3px;
+}
+
+.text-section {
+  margin: auto;
+  padding-left: 25vw;
+  padding-right: 25vw;
+  position: absolute;
+  top: 400px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 900000;
+}
+
+p {
+  font-family: 'Montserrat';
+  font-size: 3.8vw;
+  text-align: justify;
+  color: white;
+  z-index: 4;
+}
+
+.sandbox-title {
+  padding: 10em 0 10em 0;
+}
+
+.title {
+  top: 0;
+  padding-top: 20px;
+  padding-left: 40vw;
+  text-align: center;
+  position: absolute;
+}
+
+h1 {
+  color: #fff;
+  font-family: 'Cardo', serif;
+  font-size: 7.5vw;
+  font-weight: normal;
+  font-style: italic;
+  letter-spacing: 0.1em;
+  line-height: 2.2em;
+}
+
+body {
+  font-size: 16px;
+  /* Base Size */
+  /*Setting the base font family*/
+  font-family: "Source Sans Pro", Verdana, sans-serif;
+  background-color: rgba(33, 33, 33, 1);
+  margin: 0;
+  padding: 0;
+}
+
+.background-4 img {
+  float: left;
+  width: 100%;
+  height: auto;
+}
+
+.background-4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.background-moon img {
+  float: left;
+  width: 100%;
+  height: auto;
+}
+
+.background-moon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: auto;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.background-1 img {
+  float: left;
+  width: 100%;
+  height: auto;
+  /*margin-top: 234%;*/
+  margin-top: 100%;
+  z-index: 10000000;
+}
+
+.background-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.background-clouds img {
+  float: left;
+  width: 100%;
+  height: auto;
+  opacity: 0.4;
+}
+
+.background-clouds {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: auto;
+}
+
+.background-center {
+  position: relative;
+  /*max-width: 1400px;*/
+  background-color: #bbc2bb;
+}
+
+.container {
+  margin-left: 10vw;
+}
+
+/*===================MEDIA QUERY===========*/
+
+/* Desktop*/
+
+/*@media only screen and (max-device-width: 332) {
+  .firstcharacter {
+    color: rgb(33,200,67);
+    float: left;
+    font-family: Georgia;
+    font-size: 7.1vw;
+    line-height: 9.5vw;
+    padding-top: 0.1vw;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+
+  .text-section {
+    margin: auto;
+    padding-left: 25vw;
+    padding-right: 25vw;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 900000;
+  }
+
+  p {
+    font-family: 'Montserrat';
+    font-size: 2.8vw;
+    text-align: justify;
+    color: white;
+    z-index: 4;
+  }
+
+  .sandbox-title {
+    padding: 10em 0 10em 0;
+  }
+
+  .title {
+    top: 0;
+    padding-top: 20px;
+    padding-left: 25vw;
+    text-align: center;
+    position: absolute;
+  }
+
+  h1 {
+    color: #fff;
+    font-family: 'Cardo', serif;
+    font-size: 11.5vw;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
+  }
+}
+
+@media only screen and (min-device-width: 333 && max-device-width: 345px) {
+  .firstcharacter {
+    color: rgb(33,200,67);
+    float: left;
+    font-family: Georgia;
+    font-size: 7.1vw;
+    line-height: 9.5vw;
+    padding-top: 0.1vw;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+
+  .text-section {
+    margin: auto;
+    padding-left: 25vw;
+    padding-right: 25vw;
+    position: absolute;
+    top: 140px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 900000;
+  }
+
+  p {
+    font-family: 'Montserrat';
+    font-size: 2.8vw;
+    text-align: justify;
+    color: white;
+    z-index: 4;
+  }
+
+  .sandbox-title {
+    padding: 10em 0 10em 0;
+  }
+
+  .title {
+    top: 0;
+    padding-top: 20px;
+    padding-left: 25vw;
+    text-align: center;
+    position: absolute;
+  }
+
+  h1 {
+    color: #fff;
+    font-family: 'Cardo', serif;
+    font-size: 11.5vw;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
+  }
+}
+
+@media only screen and (min-device-width: 346px && max-device-width: 465px) {
+  .firstcharacter {
+    color: rgb(33,200,67);
+    float: left;
+    font-family: Georgia;
+    font-size: 7.1vw;
+    line-height: 9.5vw;
+    padding-top: 0.1vw;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+
+  .text-section {
+    margin: auto;
+    padding-left: 25vw;
+    padding-right: 25vw;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 900000;
+  }
+
+  p {
+    font-family: 'Montserrat';
+    font-size: 2.8vw;
+    text-align: justify;
+    color: white;
+    z-index: 4;
+  }
+
+  .sandbox-title {
+    padding: 10em 0 10em 0;
+  }
+
+  .title {
+    top: 0;
+    padding-top: 20px;
+    padding-left: 25vw;
+    text-align: center;
+    position: absolute;
+  }
+
+  h1 {
+    color: #fff;
+    font-family: 'Cardo', serif;
+    font-size: 11.5vw;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
+  }
+}
+
+@media only screen and (min-device-width: 466px && max-device-width: 645px) {
+  .firstcharacter {
+    color: rgb(33,200,67);
+    float: left;
+    font-family: Georgia;
+    font-size: 7.1vw;
+    line-height: 9.5vw;
+    padding-top: 0.1vw;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+
+  .text-section {
+    margin: auto;
+    padding-left: 25vw;
+    padding-right: 25vw;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 900000;
+  }
+
+  p {
+    font-family: 'Montserrat';
+    font-size: 2.8vw;
+    text-align: justify;
+    color: white;
+    z-index: 4;
+  }
+
+  .sandbox-title {
+    padding: 10em 0 10em 0;
+  }
+
+  .title {
+    top: 0;
+    padding-top: 20px;
+    padding-left: 25vw;
+    text-align: center;
+    position: absolute;
+  }
+
+  h1 {
+    color: #fff;
+    font-family: 'Cardo', serif;
+    font-size: 11.5vw;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
+  }
+}*/
+
+/*================SMALL=========================*/
+
+/*@media only screen {
+  .firstcharacter {
+    color: rgb(33, 200, 67);
+    float: left;
+    font-family: Georgia;
+    font-size: 7.1vw;
+    line-height: 9.5vw;
+    padding-top: 0.1vw;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+  .text-section {
+    margin: auto;
+    padding-left: 25vw;
+    padding-right: 25vw;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 900000;
+  }
+  p {
+    font-family: 'Montserrat';
+    font-size: 2.8vw;
+    text-align: justify;
+    color: white;
+    z-index: 4;
+  }
+  .sandbox-title {
+    padding: 10em 0 10em 0;
+  }
+  .title {
+    top: 0;
+    padding-top: 20px;
+    padding-left: 25vw;
+    text-align: center;
+    position: absolute;
+  }
+  h1 {
+    color: #fff;
+    font-family: 'Cardo', serif;
+    font-size: 11.5vw;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
+  }
+}*/
+
+@media only screen and (max-width: 479px) {
+  .firstcharacter {
+    color: rgb(33, 200, 67);
+    float: left;
+    font-family: Georgia;
+    font-size: 7.1vw;
+    line-height: 9.5vw;
+    padding-top: 0.1vw;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+  .text-section {
+    margin: auto;
+    padding-left: 25vw;
+    padding-right: 25vw;
+    position: absolute;
+    top: 160px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 900000;
+  }
+  p {
+    font-family: 'Montserrat';
+    font-size: 2.8vw;
+    text-align: justify;
+    color: white;
+    z-index: 4;
+  }
+  .sandbox-title {
+    padding: 10em 0 10em 0;
+  }
+  .title {
+    top: 0;
+    padding-top: 20px;
+    padding-left: 25vw;
+    text-align: center;
+    position: absolute;
+  }
+  h1 {
+    color: #fff;
+    font-family: 'Cardo', serif;
+    font-size: 11.5vw;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
+  }
+}
+
+/*================MEDIUM=========================*/
+
+@media only screen and (min-width: 480) && (max-width: 599px) {
+  .firstcharacter {
+    color: rgb(33, 200, 67);
+    float: left;
+    font-family: Georgia;
+    font-size: 7.1vw;
+    line-height: 9.5vw;
+    padding-top: 0.1vw;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+  .text-section {
+    margin: auto;
+    padding-left: 25vw;
+    padding-right: 25vw;
+    position: absolute;
+    top: 1290px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 900000;
+  }
+  p {
+    font-family: 'Montserrat';
+    font-size: 2.8vw;
+    text-align: justify;
+    color: white;
+    z-index: 4;
+  }
+  .sandbox-title {
+    padding: 10em 0 10em 0;
+  }
+  .title {
+    top: 0;
+    padding-top: 20px;
+    padding-left: 25vw;
+    text-align: center;
+    position: absolute;
+  }
+  h1 {
+    color: #fff;
+    font-family: 'Cardo', serif;
+    font-size: 11.5vw;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .firstcharacter {
+    color: rgb(33, 200, 67);
+    float: left;
+    font-family: Georgia;
+    font-size: 7.1vw;
+    line-height: 9.5vw;
+    padding-top: 0.1vw;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+  .text-section {
+    margin: auto;
+    padding-left: 25vw;
+    padding-right: 25vw;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 900000;
+  }
+  p {
+    font-family: 'Montserrat';
+    font-size: 2.8vw;
+    text-align: justify;
+    color: white;
+    z-index: 4;
+  }
+  .sandbox-title {
+    padding: 10em 0 10em 0;
+  }
+  .title {
+    top: 0;
+    padding-top: 20px;
+    padding-left: 25vw;
+    text-align: center;
+    position: absolute;
+  }
+  h1 {
+    color: #fff;
+    font-family: 'Cardo', serif;
+    font-size: 11.5vw;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
+  }
+}
+
+/*================LARGE=========================*/
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .firstcharacter {
+    color: rgb(33, 200, 67);
+    float: left;
+    font-family: Georgia;
+    font-size: 7.1vw;
+    line-height: 9.5vw;
+    padding-top: 0.1vw;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+  .text-section {
+    margin: auto;
+    padding-left: 25vw;
+    padding-right: 25vw;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 900000;
+  }
+  p {
+    font-family: 'Montserrat';
+    font-size: 2.8vw;
+    text-align: justify;
+    color: white;
+    z-index: 4;
+  }
+  .sandbox-title {
+    padding: 10em 0 10em 0;
+  }
+  .title {
+    top: 0;
+    padding-top: 20px;
+    padding-left: 25vw;
+    text-align: center;
+    position: absolute;
+  }
+  h1 {
+    color: #fff;
+    font-family: 'Cardo', serif;
+    font-size: 11.5vw;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
+  }
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+  .firstcharacter {
+    color: rgb(33, 200, 67);
+    float: left;
+    font-family: Georgia;
+    font-size: 7.1vw;
+    line-height: 9.5vw;
+    padding-top: 0.1vw;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+  .text-section {
+    margin: auto;
+    padding-left: 25vw;
+    padding-right: 25vw;
+    position: absolute;
+    top: 900px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 900000;
+  }
+  p {
+    font-family: 'Montserrat';
+    font-size: 2.8vw;
+    text-align: justify;
+    color: white;
+    z-index: 4;
+  }
+  .sandbox-title {
+    padding: 10em 0 10em 0;
+  }
+  .title {
+    top: 0;
+    padding-top: 20px;
+    padding-left: 25vw;
+    text-align: center;
+    position: absolute;
+  }
+  h1 {
+    color: #fff;
+    font-family: 'Cardo', serif;
+    font-size: 11.5vw;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
+  }
+}
+
+/*================XLARGE=========================*/
+
+
+
+@media only screen and (min-width: 1367px) {
+  .firstcharacter {
+    color: rgb(33, 200, 67);
+    float: left;
+    font-family: Georgia;
+    font-size: 7.1vw;
+    line-height: 9.5vw;
+    padding-top: 0.1vw;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+  .text-section {
+    margin: auto;
+    padding-left: 25vw;
+    padding-right: 25vw;
+    position: absolute;
+    top: 600px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 900000;
+  }
+  p {
+    font-family: 'Montserrat';
+    font-size: 2.8vw;
+    text-align: justify;
+    color: white;
+    z-index: 4;
+  }
+  .sandbox-title {
+    padding: 10em 0 10em 0;
+  }
+  .title {
+    top: 0;
+    padding-top: 10px;
+    padding-left: 25vw;
+    text-align: center;
+    position: absolute;
+  }
+  h1 {
+    color: #fff;
+    font-family: 'Cardo', serif;
+    font-size: 13.5vw;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
+  }
+}
+
+/*================MOBILE=========================*/
+
+/*small phones*/
+
+@media only screen and (max-device-width: 374px) and (orientation: portrait) {
+  .firstcharacter {
+    color: rgb(33, 200, 67);
+    float: left;
+    font-family: Georgia;
+    font-size: 7.1vw;
+    line-height: 9.5vw;
+    padding-top: 0.1vw;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+  .text-section {
+    margin: auto;
+    padding-left: 25vw;
+    padding-right: 25vw;
+    position: absolute;
+    top: 140px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 900000;
+  }
+  p {
+    font-family: 'Montserrat';
+    font-size: 2.8vw;
+    text-align: justify;
+    color: white;
+    z-index: 4;
+  }
+  .sandbox-title {
+    padding: 10em 0 10em 0;
+  }
+  .title {
+    top: 0;
+    padding-top: 20px;
+    padding-left: 25vw;
+    text-align: center;
+    position: absolute;
+  }
+  h1 {
+    color: #fff;
+    font-family: 'Cardo', serif;
+    font-size: 11.5vw;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
+  }
+}
+
+/*iphone 7 portrait*/
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+  .firstcharacter {
+    color: rgb(33, 200, 67);
+    float: left;
+    font-family: Georgia;
+    font-size: 7.1vw;
+    line-height: 9.5vw;
+    padding-top: 0.1vw;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+  .text-section {
+    margin: auto;
+    padding-left: 25vw;
+    padding-right: 25vw;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 900000;
+  }
+  p {
+    font-family: 'Montserrat';
+    font-size: 2.8vw;
+    text-align: justify;
+    color: white;
+    z-index: 4;
+  }
+  .sandbox-title {
+    padding: 10em 0 10em 0;
+  }
+  .title {
+    top: 0;
+    padding-top: 20px;
+    padding-left: 25vw;
+    text-align: center;
+    position: absolute;
+  }
+  h1 {
+    color: #fff;
+    font-family: 'Cardo', serif;
+    font-size: 11.5vw;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
+  }
+}
+
+/*=================TABLETS====================*/
+
+/*ipad portrait*/
+
+@media only screen and (min-device-width: 734px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .firstcharacter {
+    color: rgb(33, 200, 67);
+    float: left;
+    font-family: Georgia;
+    font-size: 7.1vw;
+    line-height: 9.5vw;
+    padding-top: 0.1vw;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+  .text-section {
+    margin: auto;
+    padding-left: 25vw;
+    padding-right: 25vw;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 900000;
+  }
+  p {
+    font-family: 'Montserrat';
+    font-size: 2.8vw;
+    text-align: justify;
+    color: white;
+    z-index: 4;
+  }
+  .sandbox-title {
+    padding: 10em 0 10em 0;
+  }
+  .title {
+    top: 0;
+    padding-top: 20px;
+    padding-left: 25vw;
+    text-align: center;
+    position: absolute;
+  }
+  h1 {
+    color: #fff;
+    font-family: 'Cardo', serif;
+    font-size: 11.5vw;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
+  }
+}
+
+/*ipad landscape*/
+
+@media only screen and (min-device-width: 734px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .firstcharacter {
+    color: rgb(33, 200, 67);
+    float: left;
+    font-family: Georgia;
+    font-size: 7.1vw;
+    line-height: 9.5vw;
+    padding-top: 0.1vw;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+  .text-section {
+    margin: auto;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    position: absolute;
+    top: 350px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 900000;
+  }
+  p {
+    font-family: 'Montserrat';
+    font-size: 2.8vw;
+    text-align: justify;
+    color: white;
+    z-index: 4;
+  }
+  .sandbox-title {
+    padding: 10em 0 10em 0;
+  }
+  .title {
+    top: 0;
+    padding-top: 20px;
+    padding-left: 25vw;
+    text-align: center;
+    position: absolute;
+  }
+  h1 {
+    color: #fff;
+    font-family: 'Cardo', serif;
+    font-size: 11.5vw;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
+  }
+}
+
+/*ipad pro portrait*/
+
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1366px) and (orientation: portrait) {
+  .firstcharacter {
+    color: rgb(33, 200, 67);
+    float: left;
+    font-family: Georgia;
+    font-size: 7.1vw;
+    line-height: 9.5vw;
+    padding-top: 0.1vw;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+  .text-section {
+    margin: auto;
+    padding-left: 25vw;
+    padding-right: 25vw;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 900000;
+  }
+  p {
+    font-family: 'Montserrat';
+    font-size: 2.8vw;
+    text-align: justify;
+    color: white;
+    z-index: 4;
+  }
+  .sandbox-title {
+    padding: 10em 0 10em 0;
+  }
+  .title {
+    top: 0;
+    padding-top: 20px;
+    padding-left: 25vw;
+    text-align: center;
+    position: absolute;
+  }
+  h1 {
+    color: #fff;
+    font-family: 'Cardo', serif;
+    font-size: 11.5vw;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
+  }
+}
+
+/*ipad pro landscape*/
+
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1366px) and (orientation: landscape) {
+  .firstcharacter {
+    color: rgb(33, 200, 67);
+    float: left;
+    font-family: Georgia;
+    font-size: 7.1vw;
+    line-height: 9.5vw;
+    padding-top: 0.1vw;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+  .text-section {
+    margin: auto;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    position: absolute;
+    top: 450px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 900000;
+  }
+  p {
+    font-family: 'Montserrat';
+    font-size: 2.8vw;
+    text-align: justify;
+    color: white;
+    z-index: 4;
+  }
+  .sandbox-title {
+    padding: 10em 0 10em 0;
+  }
+  .title {
+    top: 0;
+    padding-top: 20px;
+    padding-left: 25vw;
+    text-align: center;
+    position: absolute;
+  }
+  h1 {
+    color: #fff;
+    font-family: 'Cardo', serif;
+    font-size: 11.5vw;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
+  }
+}
+
+body {
+  overflow: scroll !important;
+}
+
+
+/*==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/* Use this clearfix class on the parent of floated elements to clear the float! */
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
