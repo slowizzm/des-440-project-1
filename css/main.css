@@ -1,8 +1,17 @@
+/* There's where you would put your Google Fonts import */
+
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond|Cardo:400italic);
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700|Source+Sans+Pro:200,300,400,400i,600,700,900|Source+Serif+Pro:400,600,700');
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 
 /*This is some further normalization and base styles. */
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400|Raleway:600');
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
@@ -10,7 +19,6 @@
 
 ::selection {
   background: #b3d4fc;
-  /*background: #000000;*/
   text-shadow: none;
 }
 
@@ -47,22 +55,6 @@ textarea {
   resize: vertical;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-/*Here's where you would put your Google Fonts import*/
-
-/*///////////////////////////////////////////////////////////////////////////*/
-
-@font-face {
-  font-family: 'Raleway', sans-serif;
-}
-
-@font-face {
-  font-family: 'Montserrat', sans-serif;
-}
-
 /* BOX MODEL SETTING FOR ALL ELEMENTS BY DEFAULT
 THIS IS BETTER THAN DEFAULT, YOU SHOULD ALWAYS USE THIS:
 */
@@ -74,13 +66,28 @@ html {
   line-height: 1.4;
 }
 
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* END BOX MODEL SETTINGS */
+
+body {
+  font-size: 16px;
+  /* Base Size */
+  /*Setting the base font family*/
+  font-family: "Source Sans Pro", Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 .firstcharacter {
-  color: #903;
+  color: rgb(33, 200, 67);
   float: left;
   font-family: Georgia;
-  font-size: 75px;
-  line-height: 60px;
-  padding-top: 4px;
+  font-size: 7.1vw;
+  line-height: 9.5vw;
+  padding-top: 0.1vw;
   padding-right: 8px;
   padding-left: 3px;
 }
@@ -90,7 +97,7 @@ html {
   padding-left: 25vw;
   padding-right: 25vw;
   position: absolute;
-  top: 400px;
+  top: 160px;
   left: 0;
   bottom: 0;
   right: 0;
@@ -99,34 +106,32 @@ html {
 
 p {
   font-family: 'Montserrat';
-  font-size: 1.8vw;
+  font-size: 3.1vw;
   text-align: justify;
   color: white;
   z-index: 4;
-  /*background-color: rgba(33, 33, 33, 0.1);*/
+}
+
+.sandbox-title {
+  padding: 10em 0 10em 0;
+}
+
+.title {
+  top: 0;
+  padding-top: 20px;
+  padding-left: 33vw;
+  text-align: center;
+  position: absolute;
 }
 
 h1 {
-  font-family: 'Montserrat';
-  font-size: 6.3vw;
-  color: rgba(0, 255, 0, 1.0);
-  padding-top: 100px;
-  padding-bottom: 100px;
-  width: 80vw;
-  padding-left: 20vw;
-  left: 100vw;
-  /*margin-left: 103px;*/
-  top: 0;
-  opacity: 0.3;
-  text-align: center;
-  /*background-color: rgba(33, 33, 33, 0.3);*/
-}
-
-a {
-  font-family: 'Montserrat';
-  text-align: center;
-  display: block;
-  /*color: grey;*/
+  color: #fff;
+  font-family: 'Cardo', serif;
+  font-size: 10.5vw;
+  font-weight: normal;
+  font-style: italic;
+  letter-spacing: 0.1em;
+  line-height: 2.2em;
 }
 
 body {
@@ -138,22 +143,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
-/*.background-wolf img {
-  float: left;
-  width: 42%;
-  height: auto;
-  margin-top: 830%;
-  margin-left: 290%;
-}
-.background-wolf {
-  position: bottom;
-  top: 0;
-  left:0;
-  width: 100%;
-  height: auto;
-  z-index: -9000;
-}*/
 
 .background-4 img {
   float: left;
@@ -167,8 +156,25 @@ body {
   left: 0;
   width: 100%;
   height: auto;
-  opacity: 0.1;
+  opacity: 0.3;
   z-index: -1;
+}
+
+.background-moon img {
+  float: left;
+  width: 100%;
+  height: auto;
+}
+
+.background-moon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: auto;
+  opacity: 1;
+  z-index: 1;
+  z-index: 10000000;
 }
 
 .background-1 img {
@@ -177,7 +183,6 @@ body {
   height: auto;
   /*margin-top: 234%;*/
   margin-top: 100%;
-  z-index: 10000000;
 }
 
 .background-1 {
@@ -186,13 +191,14 @@ body {
   left: 0;
   width: 100%;
   height: auto;
+  z-index: 10000000;
 }
 
 .background-clouds img {
   float: left;
   width: 100%;
   height: auto;
-  opacity: 0.4;
+  opacity: 0.6;
 }
 
 .background-clouds {
@@ -213,401 +219,776 @@ body {
   margin-left: 10vw;
 }
 
-@media only screen and (max-width: 354px) {
-  .text-section {
-    top: 100px;
+@media only screen and (max-width: 479px) {
+  .firstcharacter {
+    color: rgb(33, 200, 67);
+    float: left;
+    font-family: Georgia;
+    font-size: 7.1vw;
+    line-height: 9.5vw;
+    padding-top: 0.1vw;
+    padding-right: 8px;
+    padding-left: 3px;
   }
-  p {
-    font-family: 'Montserrat';
-    font-size: 2.7vw;
-    text-align: justify;
-    color: white;
-    z-index: 3;
-    /*background-color: rgba(33, 33, 33, 0.1);*/
-  }
-}
-
-@media only screen and (min-width: 355px && max-width: 374px) {
   .text-section {
     margin: auto;
     padding-left: 25vw;
     padding-right: 25vw;
     position: absolute;
-    top: 4px;
+    top: 150px;
     left: 0;
     bottom: 0;
     right: 0;
-
     z-index: 900000;
   }
   p {
     font-family: 'Montserrat';
-    font-size: 3.7vw;
+    font-size: 2.9vw;
     text-align: justify;
     color: white;
-    z-index: 3;
-    /*background-color: rgba(33, 33, 33, 0.1);*/
+    z-index: 4;
   }
-}
-
-
-@media only screen and (min-width: 668px && max-width: 849px) {
-  .text-section {
-    top: 200px;
+  .sandbox-title {
+    padding: 10em 0 10em 0;
   }
-  p {
-    font-family: 'Montserrat';
-    font-size: 4.1vw;
-    text-align: justify;
-    color: white;
-    z-index: 3;
-    /*background-color: rgba(33, 33, 33, 0.1);*/
-  }
-}
-
-@media only screen and (min-width: 850px) and (max-width:920px) {
-  .text-section {
-    padding-top: 1133px;
-  }
-  p {
-    font-family: 'Montserrat';
-    font-size: 2.1vw;
-    text-align: justify;
-    color: white;
-    z-index: 10000;
-    /*background-color: rgba(33, 33, 33, 0.1);*/
-  }
-  .background-4 img {
-    float: left;
-    width: 100%;
-    height: auto;
-  }
-  .background-4 {
-    position: absolute;
+  .title {
     top: 0;
-    left: 10%;
-    width: 80%;
-    height: auto;
-    opacity: 0.2;
-    z-index: -1;
-  }
-  .background-1 img {
-    float: left;
-    width: 100%;
-    height: auto;
-    /*margin-top: 236%;*/
-    margin-top: 100%;
-  }
-  .background-1 {
+    padding-top: 20px;
+    padding-left: 30vw;
+    text-align: center;
     position: absolute;
-    top: 0;
-    left: 10%;
-    width: 80%;
-    height: auto;
-    z-index: 10000000;
-  }
-}
-
-@media only screen and (min-width: 921px) {
-  .text-section {
-    top: 400px;
-  }
-  p {
-    font-family: 'Montserrat';
-    font-size: 2.1vw;
-    text-align: justify;
-    color: white;
-    z-index: 10000;
-    /*background-color: rgba(33, 33, 33, 0.1);*/
-  }
-  .background-4 img {
-    float: left;
-    width: 100%;
-    height: auto;
-  }
-  .background-4 {
-    position: absolute;
-    top: 0;
-    left: 10%;
-    width: 75%;
-    height: auto;
-    opacity: 0.2;
-    z-index: -1;
-  }
-  .background-1 img {
-    float: left;
-    width: 100%;
-    height: auto;
-    /*margin-top: 236%;*/
-    margin-top: 100%;
-  }
-  .background-1 {
-    position: absolute;
-    top: 0;
-    left: 10%;
-    width: 75%;
-    height: auto;
-    z-index: 10000000;
-  }
-}
-
-/*iPhone 7 in landscape*/
-
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
-  html {
-    box-sizing: border-box;
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  /* END BOX MODEL SETTINGS */
-  .text-section {
-    padding-top: 333px;
-  }
-  p {
-    font-family: 'Raleway';
-    font-size: 2.3em;
-    text-align: justify;
-    color: white;
-    z-index: 10000;
-    /*background-color: rgba(33, 33, 33, 0.1);*/
-  }
-  p q {
-    font-family: 'Raleway';
-    font-size: 1.3em;
-    text-align: justify;
-    color: white;
-    padding-left: 133px;
-    /*background-color: rgba(33, 33, 33, 0.1);*/
   }
   h1 {
-    font-family: 'Raleway';
-    font-size: 2.3em;
-    color: rgba(0, 255, 0, 0.6);
-    position: relative;
-    padding-top: 33px;
-    margin-bottom: 0;
-    margin-left: 103px;
-    /*background-color: rgba(33, 33, 33, 0.3);*/
-  }
-  a {
-    font-family: 'Open Sans Condensed', serif;
-    text-align: center;
-    display: block;
-    /*color: grey;*/
-  }
-  body {
-    font-size: 16px;
-    /* Base Size */
-    /*Setting the base font family*/
-    font-family: "Source Sans Pro", Verdana, sans-serif;
-    background-color: #bbc2bb;
-    margin: 0;
-    padding: 0;
-  }
-  .container {
-    min-width: 100%;
-    max-width: 100%;
-    margin-left: 0%;
-    margin-right: 0%;
-  }
-  .background-wolf img {
-    float: left;
-    width: 42%;
-    height: auto;
-    margin-top: 996px;
-    margin-left: 216px;
-  }
-  .background-wolf {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: auto;
-    z-index: 9000;
-  }
-  .background-4 {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-    text-align: center;
-    z-index: -9000;
-  }
-  .background-4 img {
-    float: left;
-    width: 100%;
-    height: auto;
-  }
-  .background-1 img {
-    float: left;
-    width: 100%;
-    height: auto;
-    /*margin-top: 230%;*/
-    margin-top: 100%;
-  }
-  .background-1 {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: auto;
-    z-index: 10000000;
-  }
-  .background-clouds img {
-    float: left;
-    width: 100%;
-    height: auto;
-    opacity: 0.3;
-  }
-  .background-clouds {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: auto;
-    z-index: -9000;
-  }
-  .background-center {
-    position: relative;
-    /*max-width: 1400px;*/
-    background-color: #bbc2bb;
+    color: #fff;
+    font-family: 'Cardo', serif;
+    font-size: 11.5vw;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
   }
 }
 
-/*///////////////////////////////////////////////////////////////////////////*/
+/*================MEDIUM=========================*/
 
-/*iPhone 7 in portrait*/
-
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
-  /* BOX MODEL SETTING FOR ALL ELEMENTS BY DEFAULT
-  THIS IS BETTER THAN DEFAULT, YOU SHOULD ALWAYS USE THIS:
-  */
-  html {
-    box-sizing: border-box;
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
+@media only screen and (min-width: 480px) and (max-width: 599px) {
+  .firstcharacter {
+    color: rgb(33, 200, 67);
+    float: left;
+    font-family: Georgia;
+    font-size: 7.1vw;
+    line-height: 9.5vw;
+    padding-top: 0.1vw;
+    padding-right: 8px;
+    padding-left: 3px;
   }
-  /* END BOX MODEL SETTINGS */
+  .text-section {
+    margin: auto;
+    padding-left: 22vw;
+    padding-right: 22vw;
+    position: absolute;
+    top: 220px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 900000;
+  }
+  p {
+    font-family: 'Montserrat';
+    font-size: 2.9vw;
+    text-align: justify;
+    color: white;
+    z-index: 4;
+  }
+  .sandbox-title {
+    padding: 10em 0 10em 0;
+  }
+  .title {
+    top: 0;
+    padding-top: 20px;
+    padding-left: 30vw;
+    text-align: center;
+    position: absolute;
+  }
+  h1 {
+    color: #fff;
+    font-family: 'Cardo', serif;
+    font-size: 11.5vw;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .firstcharacter {
+    color: rgb(33, 200, 67);
+    float: left;
+    font-family: Georgia;
+    font-size: 7.1vw;
+    line-height: 9.5vw;
+    padding-top: 0.1vw;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
   .text-section {
     margin: auto;
     padding-left: 25vw;
     padding-right: 25vw;
     position: absolute;
-    top: 4px;
+    top: 220px;
     left: 0;
     bottom: 0;
     right: 0;
+    z-index: 900000;
   }
   p {
-    font-family: 'Raleway';
-    font-size: 1.3em;
+    font-family: 'Montserrat';
+    font-size: 3.1vw;
     text-align: justify;
     color: white;
-    z-index: 10000;
-    /*background-color: rgba(33, 33, 33, 0.1);*/
+    z-index: 4;
   }
-  p q {
-    font-family: 'Raleway';
-    font-size: 1.3em;
-    text-align: justify;
-    color: white;
-    padding-left: 133px;
-    /*background-color: rgba(33, 33, 33, 0.1);*/
+  .sandbox-title {
+    padding: 10em 0 10em 0;
+  }
+  .title {
+    top: 0;
+    padding-top: 20px;
+    padding-left: 30vw;
+    text-align: center;
+    position: absolute;
   }
   h1 {
-    font-family: 'Raleway';
-    font-size: 2.3em;
-    color: rgba(0, 255, 0, 0.6);
-    position: relative;
-    padding-top: 33px;
-    margin-bottom: 0;
-    margin-left: 103px;
-    /*background-color: rgba(33, 33, 33, 0.3);*/
+    color: #fff;
+    font-family: 'Cardo', serif;
+    font-size: 11.5vw;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
   }
-  a {
-    font-family: 'Open Sans Condensed', serif;
+}
+
+/*================LARGE=========================*/
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .firstcharacter {
+    color: rgb(33, 200, 67);
+    float: left;
+    font-family: Georgia;
+    font-size: 7.1vw;
+    line-height: 9.5vw;
+    padding-top: 0.1vw;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+  .text-section {
+    margin: auto;
+    padding-left: 18vw;
+    padding-right: 18vw;
+    position: absolute;
+    top: 300px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 900000;
+  }
+  p {
+    font-family: 'Montserrat';
+    font-size: 3.2vw;
+    text-align: justify;
+    color: white;
+    z-index: 4;
+  }
+  .sandbox-title {
+    padding: 10em 0 10em 0;
+  }
+  .title {
+    top: 0;
+    padding-top: 20px;
+    padding-left: 30vw;
     text-align: center;
-    display: block;
-    /*color: grey;*/
-  }
-  body {
-    font-size: 16px;
-    /* Base Size */
-    /*Setting the base font family*/
-    font-family: "Source Sans Pro", Verdana, sans-serif; //background-color: #bbc2bb;
-    margin: 0;
-    padding: 0;
-  }
-  .container {
-    min-width: 100%;
-    max-width: 100%;
-    margin-left: 0%;
-    margin-right: 0%;
-  }
-  .background-wolf img {
-    float: left;
-    width: 42%;
-    height: auto;
-    margin-top: 996px;
-    margin-left: 216px;
-  }
-  .background-wolf {
     position: absolute;
-    top: 0;
-    width: 100%;
-    height: auto;
-    z-index: 9000;
   }
-  .background-4 {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-    z-index: -9000;
-  }
-  .background-4 img {
-    float: left;
-    width: 100%;
-    height: auto;
-    opacity: 0.2;
+  h1 {
+    color: #fff;
+    font-family: 'Cardo', serif;
+    font-size: 11.5vw;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
   }
   .background-1 img {
     float: left;
     width: 100%;
     height: auto;
-    /*margin-top: 230%;*/
+    /*margin-top: 234%;*/
+    margin-top: 105%;
+  }
+
+  .background-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 10000000;
+  }
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1180px) {
+  .firstcharacter {
+    color: rgb(33, 200, 67);
+    float: left;
+    font-family: Georgia;
+    font-size: 7.1vw;
+    line-height: 9.5vw;
+    padding-top: 0.1vw;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+  .text-section {
+    margin: auto;
+    padding-left: 18vw;
+    padding-right: 18vw;
+    position: absolute;
+    top: 350px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 900000;
+  }
+  p {
+    font-family: 'Montserrat';
+    font-size: 3.0vw;
+    text-align: justify;
+    color: white;
+    z-index: 4;
+  }
+  .sandbox-title {
+    padding: 10em 0 10em 0;
+  }
+  .title {
+    top: 0;
+    padding-top: 10px;
+    padding-left: 25vw;
+    text-align: center;
+    position: absolute;
+  }
+  h1 {
+    color: #fff;
+    font-family: 'Cardo', serif;
+    font-size: 11.5vw;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
+  }
+
+  .background-4 img {
+    float: left;
+    width: 100%;
+    height: auto;
+  }
+  .background-4 {
+    position: absolute;
+    top: 0;
+    left: 12%;
+    width: 75%;
+    height: auto;
+    opacity: 0.3;
+    z-index: -1;
+  }
+  .background-1 img {
+    float: left;
+    width: 100%;
+    height: auto;
+    /*margin-top: 236%;*/
+    margin-top: 115%;
+  }
+  .background-1 {
+    position: absolute;
+    top: 0;
+    left: 12%;
+    width: 75%;
+    height: auto;
+    z-index: 10000000;
+  }
+}
+
+/*================XLARGE=========================*/
+
+
+
+@media only screen and (min-width: 1181px) {
+  .firstcharacter {
+    color: rgb(33, 200, 67);
+    float: left;
+    font-family: Georgia;
+    font-size: 7.1vw;
+    line-height: 9.5vw;
+    padding-top: 0.1vw;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+  .text-section {
+    margin: auto;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    position: absolute;
+    top: 400px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 900000;
+  }
+  p {
+    font-family: 'Montserrat';
+    font-size: 3.0vw;
+    text-align: justify;
+    color: white;
+    z-index: 4;
+  }
+  .sandbox-title {
+    padding: 10em 0 10em 0;
+  }
+  .title {
+    top: 0;
+    padding-top: 5px;
+    padding-left: 25vw;
+    text-align: center;
+    position: absolute;
+  }
+  h1 {
+    color: #fff;
+    font-family: 'Cardo', serif;
+    font-size: 11.5vw;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
+  }
+  .background-4 img {
+    float: left;
+    width: 100%;
+    height: auto;
+  }
+  .background-4 {
+    position: absolute;
+    top: 0;
+    left: 12%;
+    width: 75%;
+    height: auto;
+    opacity: 0.2;
+    z-index: -1;
+  }
+  .background-1 img {
+    float: left;
+    width: 100%;
+    height: auto;
+    /*margin-top: 236%;*/
+    margin-top: 110%;
+  }
+  .background-1 {
+    position: absolute;
+    top: 0;
+    left: 12%;
+    width: 75%;
+    height: auto;
+    z-index: 10000000;
+  }
+}
+
+/*================MOBILE=========================*/
+
+/*small phones*/
+
+@media only screen and (max-device-width: 374px) and (orientation: portrait) {
+  .firstcharacter {
+    color: rgb(33, 200, 67);
+    float: left;
+    font-family: Georgia;
+    font-size: 7.1vw;
+    line-height: 9.5vw;
+    padding-top: 0.1vw;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+  .text-section {
+    margin: auto;
+    padding-left: 25vw;
+    padding-right: 25vw;
+    position: absolute;
+    top: 140px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 900000;
+  }
+  p {
+    font-family: 'Montserrat';
+    font-size: 2.8vw;
+    text-align: justify;
+    color: white;
+    z-index: 4;
+  }
+  .sandbox-title {
+    padding: 10em 0 10em 0;
+  }
+  .title {
+    top: 0;
+    padding-top: 20px;
+    padding-left: 25vw;
+    text-align: center;
+    position: absolute;
+  }
+  h1 {
+    color: #fff;
+    font-family: 'Cardo', serif;
+    font-size: 11.5vw;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
+  }
+}
+
+/*iphone 7 portrait*/
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+  .firstcharacter {
+    color: rgb(33, 200, 67);
+    float: left;
+    font-family: Georgia;
+    font-size: 7.1vw;
+    line-height: 9.5vw;
+    padding-top: 0.1vw;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+  .text-section {
+    margin: auto;
+    padding-left: 25vw;
+    padding-right: 25vw;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 900000;
+  }
+  p {
+    font-family: 'Montserrat';
+    font-size: 2.8vw;
+    text-align: justify;
+    color: white;
+    z-index: 4;
+  }
+  .sandbox-title {
+    padding: 10em 0 10em 0;
+  }
+  .title {
+    top: 0;
+    padding-top: 20px;
+    padding-left: 20vw;
+    text-align: center;
+    position: absolute;
+  }
+  h1 {
+    color: #fff;
+    font-family: 'Cardo', serif;
+    font-size: 11.5vw;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
+  }.background-1 img {
+    float: left;
+    width: 100%;
+    height: auto;
+    /*margin-top: 236%;*/
     margin-top: 100%;
   }
   .background-1 {
     position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
     height: auto;
     z-index: 10000000;
   }
-  .background-clouds img {
+}
+
+/*=================TABLETS====================*/
+
+/*ipad portrait*/
+
+@media only screen and (min-device-width: 734px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .firstcharacter {
+    color: rgb(33, 200, 67);
+    float: left;
+    font-family: Georgia;
+    font-size: 7.1vw;
+    line-height: 9.5vw;
+    padding-top: 0.1vw;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+  .text-section {
+    margin: auto;
+    padding-left: 18vw;
+    padding-right: 18vw;
+    position: absolute;
+    top: 300px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 900000;
+  }
+  p {
+    font-family: 'Montserrat';
+    font-size: 3.0vw;
+    text-align: justify;
+    color: white;
+    z-index: 4;
+  }
+  .sandbox-title {
+    padding: 10em 0 10em 0;
+  }
+  .title {
+    top: 0;
+    padding-top: 20px;
+    padding-left: 25vw;
+    text-align: center;
+    position: absolute;
+  }
+  h1 {
+    color: #fff;
+    font-family: 'Cardo', serif;
+    font-size: 11.5vw;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
+  }
+  .background-1 img {
     float: left;
     width: 100%;
     height: auto;
-    opacity: 0.4;
+    /*margin-top: 236%;*/
+    margin-top: 105%;
   }
-  .background-clouds {
-    position: fixed;
+  .background-1 {
+    position: absolute;
     top: 0;
+    left: 0%;
     width: 100%;
     height: auto;
-    z-index: -9000;
+    z-index: 10000000;
   }
-  .background-center {
-    position: relative;
-    /*max-width: 1400px;*/
-    //background-color: #bbc2bb;
+}
+
+/*ipad landscape*/
+
+@media only screen and (min-device-width: 734px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .firstcharacter {
+    color: rgb(33, 200, 67);
+    float: left;
+    font-family: Georgia;
+    font-size: 7.1vw;
+    line-height: 9.5vw;
+    padding-top: 0.1vw;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+  .text-section {
+    margin: auto;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    position: absolute;
+    top: 350px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 900000;
+  }
+  p {
+    font-family: 'Montserrat';
+    font-size: 2.8vw;
+    text-align: justify;
+    color: white;
+    z-index: 4;
+  }
+  .sandbox-title {
+    padding: 10em 0 10em 0;
+  }
+  .title {
+    top: 0;
+    padding-top: 20px;
+    padding-left: 25vw;
+    text-align: center;
+    position: absolute;
+  }
+  h1 {
+    color: #fff;
+    font-family: 'Cardo', serif;
+    font-size: 11.5vw;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
+  }
+  .background-1 img {
+    float: left;
+    width: 100%;
+    height: auto;
+    /*margin-top: 236%;*/
+    margin-top: 112%;
+  }
+  .background-1 {
+    position: absolute;
+    top: 0;
+    left: 12%;
+    width: 75%;
+    height: auto;
+    z-index: 10000000;
+  }
+}
+
+/*ipad pro portrait*/
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) {
+  .firstcharacter {
+    color: rgb(33, 200, 67);
+    float: left;
+    font-family: Georgia;
+    font-size: 7.1vw;
+    line-height: 9.5vw;
+    padding-top: 0.1vw;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+  .text-section {
+    margin: auto;
+    padding-left: 22vw;
+    padding-right: 22vw;
+    position: absolute;
+    top: 330px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 900000;
+  }
+  p {
+    font-family: 'Montserrat';
+    font-size: 2.8vw;
+    text-align: justify;
+    color: white;
+    z-index: 4;
+  }
+  .sandbox-title {
+    padding: 10em 0 10em 0;
+  }
+  .title {
+    top: 0;
+    padding-top: 20px;
+    padding-left: 25vw;
+    text-align: center;
+    position: absolute;
+  }
+  h1 {
+    color: #fff;
+    font-family: 'Cardo', serif;
+    font-size: 11.5vw;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
+  }
+  .background-1 img {
+    float: left;
+    width: 100%;
+    height: auto;
+    /*margin-top: 236%;*/
+    margin-top: 110%;
+  }
+  .background-1 {
+    position: absolute;
+    top: 0;
+    left: 12%;
+    width: 75%;
+    height: auto;
+    z-index: 10000000;
+  }
+}
+
+/*ipad pro landscape*/
+
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1366px) and (orientation: landscape) {
+  .firstcharacter {
+    color: rgb(33, 200, 67);
+    float: left;
+    font-family: Georgia;
+    font-size: 7.1vw;
+    line-height: 9.5vw;
+    padding-top: 0.1vw;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+  .text-section {
+    margin: auto;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    position: absolute;
+    top: 450px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 900000;
+  }
+  p {
+    font-family: 'Montserrat';
+    font-size: 2.8vw;
+    text-align: justify;
+    color: white;
+    z-index: 4;
+  }
+  .sandbox-title {
+    padding: 10em 0 10em 0;
+  }
+  .title {
+    top: 0;
+    padding-top: 20px;
+    padding-left: 25vw;
+    text-align: center;
+    position: absolute;
+  }
+  h1 {
+    color: #fff;
+    font-family: 'Cardo', serif;
+    font-size: 11.5vw;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
+  }
+  .background-1 img {
+    float: left;
+    width: 100%;
+    height: auto;
+    /*margin-top: 236%;*/
+    margin-top: 110%;
+  }
+  .background-1 {
+    position: absolute;
+    top: 0;
+    left: 12;
+    width: 75%;
+    height: auto;
+    z-index: 10000000;
   }
 }
 
@@ -615,7 +996,8 @@ body {
   overflow: scroll !important;
 }
 
-/* ==========================================================================
+
+/*==========================================================================
    Helper classes
    ========================================================================== */
 
