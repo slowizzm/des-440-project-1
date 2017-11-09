@@ -42,7 +42,7 @@ function setup()
 		scene = new THREE.Scene({antialias:true});
 		scene.fog = new THREE.FogExp2( 0x000000, 0.0003 );
 
-		starForge(izzmRandom(0.1,1.3));
+		starForge(izzmRandom(1.3,3));
 
 		//check for browser Support
 		if (webGLSupport()) {
@@ -110,8 +110,8 @@ function webGLSupport() {
 
 function starForge(_s) {
 
-  var starQty = 5000;
-    geometry = new THREE.SphereGeometry(1000, 100, 50);
+  var starQty = 50000;
+    geometry = new THREE.SphereGeometry(1000, 10, 50);
 
       materialOptions = {
         size: _s, //
