@@ -7,7 +7,7 @@ var container, aspectRatio,
   nearPlane, farPlane,
   mouseX, mouseY, windowHalfX,
   windowHalfY, stats, geometry,
-  starStuff, materialOptions, stars;
+  starMat, matOp, star;
 
 //Scene
 
@@ -42,7 +42,7 @@ function setup()
 		scene = new THREE.Scene({antialias:true});
 		scene.fog = new THREE.FogExp2( 0x000000, 0.0003 );
 
-		starForge(izzmRandom(1.3,3));
+		stars(izzmRandom(1.3,3));
 
 		//check for browser Support
 		if (webGLSupport()) {
@@ -108,18 +108,18 @@ function webGLSupport() {
 //     renderer.setSize(WIDTH, HEIGHT);
 // }
 
-function starForge(_s) {
+function star(_s) {
 
   var starQty = 50000;
     geometry = new THREE.SphereGeometry(1000, 10, 50);
 
-      materialOptions = {
+      matOp = {
         size: _s, //
         transparency: true,
         opacity: 0.7
       };
 
-      starStuff = new THREE.PointCloudMaterial(materialOptions);
+      starMat = new THREE.PointCloudMaterial(matOp);
 
   for (var i = 0; i < starQty; i++) {
 
@@ -133,8 +133,8 @@ function starForge(_s) {
   }
 
 
-  stars = new THREE.PointCloud(geometry, starStuff);
-  scene.add(stars);
+  star = new THREE.PointCloud(geometry, starMat);
+  scene.add(star);
 }
 
 function onMouseMove(e) {
