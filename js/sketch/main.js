@@ -108,7 +108,7 @@ function webGLSupport() {
 //     renderer.setSize(WIDTH, HEIGHT);
 // }
 
-function star(_s) {
+function stars(_s) {
 
   var starQty = 50000;
     geometry = new THREE.SphereGeometry(1000, 10, 50);
